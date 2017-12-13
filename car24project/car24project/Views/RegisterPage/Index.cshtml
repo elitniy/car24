@@ -1,0 +1,167 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+
+    <link rel="stylesheet" href="~/Content/css/registerpage.css">
+    <link rel="stylesheet" href="~/Content/js/registerpage.js">
+</head>
+<body>
+    <div class="main fulllWidth">
+    <!-- top of the navigation bar -->
+    <div class="navBarSection fullwidth">
+        <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href='@Url.Action("Index", "Home")'>
+                <img src="~/Content/image/logo.png">
+            </a>
+            <span>
+                <input type="text" class="form-control" placeholder="Axtarış">
+            </span>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav mr-auto"></ul>
+                <span class="navbar-text">
+                    <ul class="login-and-languages">
+                        <a href='@Url.Action("Index", "LoginPage" )'><i class="fa fa-user-circle-o" aria-hidden="true"></i> Giriş</a>
+                        <a href="#"><i class="fa fa-globe" aria-hidden="true"></i> Dil seçimi</a>
+                    </ul>
+                </span>
+            </div>
+        </nav>
+    </div>
+
+    <!-- end top bar navigation -->
+    <div class="registerSection">
+        <div class="container">
+            <form class="form-horizontal" role="form">
+                <h2>Qeydiyyat</h2>
+                <div class="form-group">
+                    <label for="name" class="col-sm-3 control-label">Adınız</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="firstName" placeholder="Istifadəçi adı" class="form-control" autofocus>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="sirname" class="col-sm-3 control-label">Soyadınız</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="firstName" placeholder="Istifadəçi adı" class="form-control" autofocus>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="login" class="col-sm-3 control-label">Istifadəçi ad</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="firstName" placeholder="Istifadəçi adı" class="form-control" autofocus>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="col-sm-3 control-label">Email</label>
+                    <div class="col-sm-9">
+                        <input type="email" id="email" placeholder="Email" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="col-sm-3 control-label">Şifrə</label>
+                    <div class="col-sm-9">
+                        <input type="password" id="password" placeholder="Şifrə" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="birthDate" class="col-sm-3 control-label">Doğulduğu tarix</label>
+                    <div class="col-sm-9">
+                        <input type="date" id="birthDate" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="country" class="col-sm-3 control-label">Ölkə</label>
+                    <div class="col-sm-9">
+                        <select id="country" class="form-control">
+                            <option>Afghanistan</option>
+                            <option>Bahamas</option>
+                            <option>Cambodia</option>
+                            <option>Denmark</option>
+                            <option>Ecuador</option>
+                            <option>Fiji</option>
+                            <option>Gabon</option>
+                            <option>Haiti</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="country" class="col-sm-3 control-label">Şəhər</label>
+                    <div class="col-sm-9">
+                        <select id="country" class="form-control">
+                            <option>Bakı</option>
+                            <option>Madrid</option>
+                            <option>Roma</option>
+                            <option>London</option>
+                            <option>Qazax</option>
+                        </select>
+                    </div>
+                </div> <!-- /.form-group -->
+                <div class="form-group">
+                    <!--  <label class="control-label col-sm-3">Cinsiyyət</label> -->
+                    <div class="col-sm-6">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label class="radio-inline">
+                                    <input type="radio" id="femaleRadio" value="Female">Kişi
+                                </label>
+                            </div>
+                            <div class="col-sm-4">
+                                <label class="radio-inline">
+                                    <input type="radio" id="maleRadio" value="Male">Qadın
+                                </label>
+                            </div>
+
+                        </div>
+                    </div>
+                </div> <!-- /.form-group -->
+                <div class="form-group">
+                    <label for="exampleInputFile">Faylı seçin</label>
+                    <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+                    <!--  <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small> -->
+                </div>
+                <!-- /.form-group -->
+                <div class="form-group">
+                    <div class="col-sm-9 col-sm-offset-3">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox">I accept <a href="#">terms</a>
+                            </label>
+                        </div>
+                    </div>
+                </div> <!-- /.form-group -->
+
+                <div class="form-group">
+                    <div class="col-sm-9 col-sm-offset-3">
+                        <button type="submit" class="btn btn-primary btn-block">Qeydiyyat</button>
+                    </div>
+                    <div class="sosialLinks">
+                        <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                        <a href=""><i class="fa fa-github-square" aria-hidden="true"></i></a>
+                        <a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                        <a href=""><i class="fa fa-vk" aria-hidden="true"></i></a>
+                    </div>
+                    <a href='@Url.Action("Index", "Home")'>
+                        <button type="button" class="cancelbtn">Əsas səhifə</button>
+                    </a>
+                </div>
+            </form> <!-- /form -->
+        </div> <!-- ./container -->
+    </div>div>
+</div>
+</body>
+</html>

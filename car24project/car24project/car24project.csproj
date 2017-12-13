@@ -1,0 +1,892 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{61E4C37F-E57C-43C7-9B3F-4D2FC11CBA7F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>car24project</RootNamespace>
+    <AssemblyName>car24project</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Cingo\CingoAreaRegistration.cs" />
+    <Compile Include="Areas\Cingo\Controllers\AdminHomeController.cs" />
+    <Compile Include="Areas\Cingo\Controllers\AutoShopsController.cs" />
+    <Compile Include="Areas\Cingo\Controllers\AvtoAdvtsController.cs" />
+    <Compile Include="Areas\Cingo\Controllers\CarWashesController.cs" />
+    <Compile Include="Areas\Cingo\Controllers\ClubssController.cs" />
+    <Compile Include="Areas\Cingo\Controllers\ColorsController.cs" />
+    <Compile Include="Areas\Cingo\Controllers\GalleriesController.cs" />
+    <Compile Include="Areas\Cingo\Controllers\MarkasController.cs" />
+    <Compile Include="Areas\Cingo\Controllers\MessagesController.cs" />
+    <Compile Include="Areas\Cingo\Controllers\ModelssController.cs" />
+    <Compile Include="Areas\Cingo\Controllers\NewssController.cs" />
+    <Compile Include="Areas\Cingo\Controllers\ServicesController.cs" />
+    <Compile Include="Areas\Cingo\Controllers\UsersController.cs" />
+    <Compile Include="Areas\Cingo\Controllers\UsersTypesController.cs" />
+    <Compile Include="Controllers\AroundSearchPageController.cs" />
+    <Compile Include="Controllers\AutoClubController.cs" />
+    <Compile Include="Controllers\avtoAdvtssController.cs" />
+    <Compile Include="Controllers\BmwClubController.cs" />
+    <Compile Include="Controllers\BmwClubGalleryController.cs" />
+    <Compile Include="Controllers\BmwClubServiceController.cs" />
+    <Compile Include="Controllers\BmwClubUsController.cs" />
+    <Compile Include="Controllers\CarPageController.cs" />
+    <Compile Include="Controllers\CarSearchController.cs" />
+    <Compile Include="Controllers\CatalogController.cs" />
+    <Compile Include="Controllers\ContactsController.cs" />
+    <Compile Include="Controllers\GalleryController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginPageController.cs" />
+    <Compile Include="Controllers\NewController.cs" />
+    <Compile Include="Controllers\NewsController.cs" />
+    <Compile Include="Controllers\OpelClubController.cs" />
+    <Compile Include="Controllers\OpelClubGalleryController.cs" />
+    <Compile Include="Controllers\OpelClubServiceController.cs" />
+    <Compile Include="Controllers\OpelClubUsController.cs" />
+    <Compile Include="Controllers\RegisterPageController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\autoShops.cs">
+      <DependentUpon>Car24Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\avtoAdvt.cs">
+      <DependentUpon>Car24Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\avtoAdvtGallery.cs">
+      <DependentUpon>Car24Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\bodyType.cs">
+      <DependentUpon>Car24Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Car24Data.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Car24Data.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Car24Data.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Car24Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Car24Data.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Car24Data.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\carWash.cs">
+      <DependentUpon>Car24Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\car_characteristic.cs">
+      <DependentUpon>Car24Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\car_characteristic_value.cs">
+      <DependentUpon>Car24Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\car_generation.cs">
+      <DependentUpon>Car24Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\car_model.cs">
+      <DependentUpon>Car24Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\car_modification.cs">
+      <DependentUpon>Car24Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\car_serie.cs">
+      <DependentUpon>Car24Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\cat.cs">
+      <DependentUpon>Car24Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\clubs.cs">
+      <DependentUpon>Car24Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\color.cs">
+      <DependentUpon>Car24Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\countries.cs">
+      <DependentUpon>Car24Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\driveUnit.cs">
+      <DependentUpon>Car24Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\engineVolume.cs">
+      <DependentUpon>Car24Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fuelType.cs">
+      <DependentUpon>Car24Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\gallery.cs">
+      <DependentUpon>Car24Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\gender.cs">
+      <DependentUpon>Car24Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\graduationYear.cs">
+      <DependentUpon>Car24Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\marka.cs">
+      <DependentUpon>Car24Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\marka_cat.cs">
+      <DependentUpon>Car24Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\marka_norm.cs">
+      <DependentUpon>Car24Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\messages.cs">
+      <DependentUpon>Car24Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\model.cs">
+      <DependentUpon>Car24Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\model_marka_cat.cs">
+      <DependentUpon>Car24Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\motorPower.cs">
+      <DependentUpon>Car24Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\news.cs">
+      <DependentUpon>Car24Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\newsCategories.cs">
+      <DependentUpon>Car24Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\reklam.cs">
+      <DependentUpon>Car24Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\services.cs">
+      <DependentUpon>Car24Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sities.cs">
+      <DependentUpon>Car24Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagrams.cs">
+      <DependentUpon>Car24Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\transmission.cs">
+      <DependentUpon>Car24Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\users.cs">
+      <DependentUpon>Car24Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usersType.cs">
+      <DependentUpon>Car24Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\projectDatabase.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\projectDatabase_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>projectDatabase.mdf</DependentUpon>
+    </Content>
+    <Content Include="Areas\Cingo\Content\credits.txt" />
+    <Content Include="Areas\Cingo\Content\css\custom.css" />
+    <Content Include="Areas\Cingo\Content\css\fontastic.css" />
+    <Content Include="Areas\Cingo\Content\css\grasp_mobile_progress_circle-1.0.0.min.css" />
+    <Content Include="Areas\Cingo\Content\css\style.blue.css" />
+    <Content Include="Areas\Cingo\Content\css\style.default.css" />
+    <Content Include="Areas\Cingo\Content\css\style.green.css" />
+    <Content Include="Areas\Cingo\Content\css\style.pink.css" />
+    <Content Include="Areas\Cingo\Content\css\style.red.css" />
+    <Content Include="Areas\Cingo\Content\css\style.sea.css" />
+    <Content Include="Areas\Cingo\Content\css\style.violet.css" />
+    <Content Include="Areas\Cingo\Content\fonts\dashboard.svg" />
+    <Content Include="Areas\Cingo\Content\icons-reference\fonts\dashboard.svg" />
+    <Content Include="Areas\Cingo\Content\icons-reference\icons-reference.html" />
+    <Content Include="Areas\Cingo\Content\icons-reference\styles.css" />
+    <Content Include="Areas\Cingo\Content\img\avatar-1.jpg" />
+    <Content Include="Areas\Cingo\Content\img\avatar-2.jpg" />
+    <Content Include="Areas\Cingo\Content\img\avatar-3.jpg" />
+    <Content Include="Areas\Cingo\Content\img\avatar-4.jpg" />
+    <Content Include="Areas\Cingo\Content\img\avatar-5.jpg" />
+    <Content Include="Areas\Cingo\Content\img\avatar-6.jpg" />
+    <Content Include="Areas\Cingo\Content\img\favicon.ico" />
+    <Content Include="Areas\Cingo\Content\img\template-mac.png" />
+    <Content Include="Areas\Cingo\Content\js\charts-custom.js" />
+    <Content Include="Areas\Cingo\Content\js\charts-home.js" />
+    <Content Include="Areas\Cingo\Content\js\front.js" />
+    <Content Include="Areas\Cingo\Content\js\grasp_mobile_progress_circle-1.0.0.min.js" />
+    <Content Include="Areas\Cingo\Content\license.txt" />
+    <Content Include="Areas\Cingo\Content\login.html" />
+    <Content Include="Areas\Cingo\Content\readme.txt" />
+    <Content Include="Areas\Cingo\Content\register.html" />
+    <Content Include="Areas\Cingo\Content\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Areas\Cingo\Content\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Areas\Cingo\Content\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Areas\Cingo\Content\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Areas\Cingo\Content\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Areas\Cingo\Content\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Areas\Cingo\Content\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="Areas\Cingo\Content\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="Areas\Cingo\Content\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Areas\Cingo\Content\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Areas\Cingo\Content\vendor\chart.js\Chart.bundle.js" />
+    <Content Include="Areas\Cingo\Content\vendor\chart.js\Chart.bundle.min.js" />
+    <Content Include="Areas\Cingo\Content\vendor\chart.js\Chart.js" />
+    <Content Include="Areas\Cingo\Content\vendor\chart.js\Chart.min.js" />
+    <Content Include="Areas\Cingo\Content\vendor\font-awesome\css\font-awesome.css" />
+    <Content Include="Areas\Cingo\Content\vendor\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Areas\Cingo\Content\vendor\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Areas\Cingo\Content\vendor\font-awesome\HELP-US-OUT.txt" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\additional-methods.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\jquery.validate.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\jquery.validate.min.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_ar.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_az.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_bg.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_bn_BD.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_ca.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_cs.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_da.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_de.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_el.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_es.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_es_AR.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_es_PE.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_et.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_eu.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_fa.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_fi.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_fr.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_ge.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_gl.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_he.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_hr.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_hu.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_hy_AM.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_id.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_is.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_it.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_ja.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_ka.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_kk.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_ko.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_lt.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_lv.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_mk.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_my.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_nl.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_no.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_pl.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_pt_BR.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_pt_PT.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_ro.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_ru.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_sd.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_si.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_sk.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_sl.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_sr.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_sr_lat.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_sv.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_th.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_tj.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_tr.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_uk.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_ur.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_vi.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_zh.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\messages_zh_TW.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\methods_de.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\methods_es_CL.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\methods_fi.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\methods_nl.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery-validation\localization\methods_pt.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery.cookie\jquery.cookie.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery.cookie\MIT-LICENSE.txt" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery\core.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery\jquery.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery\jquery.min.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery\jquery.slim.js" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery\jquery.slim.min.js" />
+    <Content Include="Areas\Cingo\Content\vendor\malihu-custom-scrollbar-plugin\jquery.mCustomScrollbar.concat.min.js" />
+    <Content Include="Areas\Cingo\Content\vendor\malihu-custom-scrollbar-plugin\jquery.mCustomScrollbar.css" />
+    <Content Include="Areas\Cingo\Content\vendor\malihu-custom-scrollbar-plugin\jquery.mCustomScrollbar.js" />
+    <Content Include="Areas\Cingo\Content\vendor\malihu-custom-scrollbar-plugin\mCSB_buttons.png" />
+    <Content Include="Content\css\aroundsearchpage.css" />
+    <Content Include="Content\css\autoclub.css" />
+    <Content Include="Content\css\bmwclub.css" />
+    <Content Include="Content\css\bmwclubgallery.css" />
+    <Content Include="Content\css\bmwclubservice.css" />
+    <Content Include="Content\css\bmwclubus.css" />
+    <Content Include="Content\css\carpage.css" />
+    <Content Include="Content\css\carsearch.css" />
+    <Content Include="Content\css\catalog.css" />
+    <Content Include="Content\css\cataloq.css" />
+    <Content Include="Content\css\contacts.css" />
+    <Content Include="Content\css\gallery.css" />
+    <Content Include="Content\css\loginpage.css" />
+    <Content Include="Content\css\newpage.css" />
+    <Content Include="Content\css\news.css" />
+    <Content Include="Content\css\opelclub.css" />
+    <Content Include="Content\css\opelclubgallery.css" />
+    <Content Include="Content\css\opelclubservice.css" />
+    <Content Include="Content\css\opelclubus.css" />
+    <Content Include="Content\css\registerpage.css" />
+    <Content Include="Content\css\style.css" />
+    <Content Include="Content\css\style.min.css" />
+    <Content Include="Content\image\adt\1.jpg" />
+    <Content Include="Content\image\adt\2.jpg" />
+    <Content Include="Content\image\adt\3.jpg" />
+    <Content Include="Content\image\adt\4.jpg" />
+    <Content Include="Content\image\adt\5.jpg" />
+    <Content Include="Content\image\adt\6.jpg" />
+    <Content Include="Content\image\backgrimage.jpg" />
+    <Content Include="Content\image\bg.gif" />
+    <Content Include="Content\image\car_logo\audi.png" />
+    <Content Include="Content\image\car_logo\bmw.png" />
+    <Content Include="Content\image\car_logo\hyundai.gif" />
+    <Content Include="Content\image\car_logo\hyundai.png" />
+    <Content Include="Content\image\car_logo\mersedes_benz.png" />
+    <Content Include="Content\image\car_logo\opel.png" />
+    <Content Include="Content\image\car_logo\parallax.jpg" />
+    <Content Include="Content\image\car_logo\toyota.png" />
+    <Content Include="Content\image\car_logo\volksWagen.png" />
+    <Content Include="Content\image\club_logo\bmw.png" />
+    <Content Include="Content\image\club_logo\opel.png" />
+    <Content Include="Content\image\footer-parallax.jpg" />
+    <Content Include="Content\image\gallery\1.jpg" />
+    <Content Include="Content\image\gallery\2.jpg" />
+    <Content Include="Content\image\gallery\3.jpg" />
+    <Content Include="Content\image\gallery\4.jpg" />
+    <Content Include="Content\image\gallery\5.jpg" />
+    <Content Include="Content\image\gallery\6.jpg" />
+    <Content Include="Content\image\gallery\7.jpg" />
+    <Content Include="Content\image\gallery\8.jpg" />
+    <Content Include="Content\image\gallery\9.jpg" />
+    <Content Include="Content\image\logo.png" />
+    <Content Include="Content\image\news\news1.jpg" />
+    <Content Include="Content\image\news\news2.jpg" />
+    <Content Include="Content\image\news\news3.jpg" />
+    <Content Include="Content\image\reklam.png" />
+    <Content Include="Content\image\slider\1.jpg" />
+    <Content Include="Content\image\slider\2.jpg" />
+    <Content Include="Content\image\slider\3.jpg" />
+    <Content Include="Content\js\autoclub.js" />
+    <Content Include="Content\js\carpage.js" />
+    <Content Include="Content\js\contacts.js" />
+    <Content Include="Content\js\gallery.js" />
+    <Content Include="Content\js\loginpage.js" />
+    <Content Include="Content\js\newpage.js" />
+    <Content Include="Content\js\news.js" />
+    <Content Include="Content\js\news.min.js" />
+    <Content Include="Content\js\script.js" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Models\Car24Data.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Car24Data.edmx</DependentUpon>
+      <LastGenOutput>Car24Data.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Car24Data.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Car24Data.edmx</DependentUpon>
+      <LastGenOutput>Car24Data.cs</LastGenOutput>
+    </Content>
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\.git\COMMIT_EDITMSG" />
+    <Content Include="Content\.git\config" />
+    <Content Include="Content\.git\description" />
+    <Content Include="Content\.git\FETCH_HEAD" />
+    <Content Include="Content\.git\HEAD" />
+    <Content Include="Content\.git\hooks\applypatch-msg.sample" />
+    <Content Include="Content\.git\hooks\commit-msg.sample" />
+    <Content Include="Content\.git\hooks\post-update.sample" />
+    <Content Include="Content\.git\hooks\pre-applypatch.sample" />
+    <Content Include="Content\.git\hooks\pre-commit.sample" />
+    <Content Include="Content\.git\hooks\pre-push.sample" />
+    <Content Include="Content\.git\hooks\pre-rebase.sample" />
+    <Content Include="Content\.git\hooks\pre-receive.sample" />
+    <Content Include="Content\.git\hooks\prepare-commit-msg.sample" />
+    <Content Include="Content\.git\hooks\update.sample" />
+    <Content Include="Content\.git\index" />
+    <Content Include="Content\.git\info\exclude" />
+    <Content Include="Content\.git\logs\HEAD" />
+    <Content Include="Content\.git\logs\refs\heads\master" />
+    <Content Include="Content\.git\logs\refs\remotes\origin\master" />
+    <Content Include="Content\.git\objects\01\aacdb131510c6763f30d6950990af4bb5ab362" />
+    <Content Include="Content\.git\objects\0b\379cd57f6d226bdf17a503237c9e5d44cbfd1f" />
+    <Content Include="Content\.git\objects\0c\9ab7befda4ed9814979b1c21646136fafc8676" />
+    <Content Include="Content\.git\objects\0e\0fd21ee212491c33ea74a7d6a3c7bc9f102c4a" />
+    <Content Include="Content\.git\objects\13\45881105dc3668b5b462d343bdeca31a7fe150" />
+    <Content Include="Content\.git\objects\14\fcd4ac5ba63892bbc7e4c70eae9a9ef9645398" />
+    <Content Include="Content\.git\objects\1d\4866bab515d38d454ccbe4709d7c06a0f5e3f5" />
+    <Content Include="Content\.git\objects\1d\7b9af4792e95255c86b81add5c1f11f76e8a49" />
+    <Content Include="Content\.git\objects\1f\8e83fbc4fa6d5673366847f750dc50553b1bab" />
+    <Content Include="Content\.git\objects\23\22f60a137f92e5a884fea98c65beb908731ad0" />
+    <Content Include="Content\.git\objects\2b\1524d5aea5fcc3a835c72a4aecb2238368808a" />
+    <Content Include="Content\.git\objects\32\e2780203ce3c7a0739855d8cd00a09d274bc6d" />
+    <Content Include="Content\.git\objects\35\54ee4c4b3aeed0a920f8d1f7e08a7ca5e1d5e8" />
+    <Content Include="Content\.git\objects\35\a6866f9b813d73001758373a482cb5cf2de065" />
+    <Content Include="Content\.git\objects\36\d6339a4bc1817cc89f01f45e350efcbd920d81" />
+    <Content Include="Content\.git\objects\39\4abef043da750052efc3375c3168f13c92a86c" />
+    <Content Include="Content\.git\objects\3f\fee21b04baa14ff293cee67cc925b5f2b71d99" />
+    <Content Include="Content\.git\objects\42\3f3c29a4009b1b6d256bbf725b774e3b7f5804" />
+    <Content Include="Content\.git\objects\42\8623b52f1f07ee904b451ae16518ca36cf29d6" />
+    <Content Include="Content\.git\objects\42\99bc22af39c3e869bd9fa32280965a13d727a5" />
+    <Content Include="Content\.git\objects\44\a15647b19ebc42ccadcf92821de776e715dc04" />
+    <Content Include="Content\.git\objects\45\a9de672ecfbdbe5195eea3d1891649419f3468" />
+    <Content Include="Content\.git\objects\4e\230e012c726bd72a9626f0c6ce56193b55fa06" />
+    <Content Include="Content\.git\objects\5f\354e8a9cb1e0135e4d297b1b340fef4e43ee97" />
+    <Content Include="Content\.git\objects\65\c1fce0a842cd9bac5483fd2ceebbf7e0cc427e" />
+    <Content Include="Content\.git\objects\66\58b47e7c9204f82a7be7854396d6676017e482" />
+    <Content Include="Content\.git\objects\66\e4ff88e217067dbbe370038fbb20e520761064" />
+    <Content Include="Content\.git\objects\70\1771d6532436610575302e76feaf02ee635355" />
+    <Content Include="Content\.git\objects\71\5163a6b6e2f8d8af5da1f7e57d26b73b5be5dd" />
+    <Content Include="Content\.git\objects\72\bfbd7951e70f22a3b881f6b6d16f02dcb2fe70" />
+    <Content Include="Content\.git\objects\77\138a9f3eb862d3104b611de043f59cc05cf10b" />
+    <Content Include="Content\.git\objects\7a\70247dac2743fb34afd886a7c14593ec199b69" />
+    <Content Include="Content\.git\objects\7b\cb7321d4f007ee4848c0818fab1e4793a9c981" />
+    <Content Include="Content\.git\objects\7c\34d99e3e35459fa88bca28eb7541805f591ae8" />
+    <Content Include="Content\.git\objects\7f\5e06f83d13636065eb3075dcb69ae736bb5342" />
+    <Content Include="Content\.git\objects\87\0092b390c39dd3b9c0a008b8e0ad98c2edc62c" />
+    <Content Include="Content\.git\objects\89\b1a7e70a121073ce0b37fe77b4f87d8974dba5" />
+    <Content Include="Content\.git\objects\8a\9f96ffbb312bfa12396cb31dbc825b67a9731e" />
+    <Content Include="Content\.git\objects\8b\fceb6bf7ef46913ba4f2c329345e82da50ad0c" />
+    <Content Include="Content\.git\objects\92\525608d2c85171091470ba9e774230c9235b9e" />
+    <Content Include="Content\.git\objects\95\66ed9e49e8f11e315f6f41f53bc210f0881d88" />
+    <Content Include="Content\.git\objects\99\5061fbc0142c2a5389cc4a505a0f67a074abbd" />
+    <Content Include="Content\.git\objects\99\e543ff2c728e865ce9fd8c0d1aa7d9e2c4f905" />
+    <Content Include="Content\.git\objects\9a\ac4d5c6e960ede64edc2ec3aab482ded05ae04" />
+    <Content Include="Content\.git\objects\9e\737114522ea03def6b17b25c563a6a1f8373fd" />
+    <Content Include="Content\.git\objects\a1\4aaa90a2d0a25bf4099601126c3bcb27ce0194" />
+    <Content Include="Content\.git\objects\a2\7ddae4b65d2afbede3ea21fe5f49e7381a7b97" />
+    <Content Include="Content\.git\objects\a3\13a23799f0d57739de9d9e4e1f7465e3292ed3" />
+    <Content Include="Content\.git\objects\a3\fd66b975a45fc0720b81a0c6b625990c690f5f" />
+    <Content Include="Content\.git\objects\a7\09d176e47d8dcf0cfc2c98d128b889208c8eba" />
+    <Content Include="Content\.git\objects\ab\674b83294ebfe26950b6da0a72e80f920554a4" />
+    <Content Include="Content\.git\objects\ac\a494fefd98eb7ac831b5deab11b3b2c7408bf3" />
+    <Content Include="Content\.git\objects\ad\3db239f02f7b8c2a22ec9ae00e80965ca6bcdf" />
+    <Content Include="Content\.git\objects\ae\b9f4d7e2c0bafb49bc068bb9e68037ef69a8d9" />
+    <Content Include="Content\.git\objects\af\7b62032c55487e635dd98d8c3b54fd1209d21f" />
+    <Content Include="Content\.git\objects\b0\782f568981f8230f16a51b4a22f3550213c348" />
+    <Content Include="Content\.git\objects\b1\7049c31ab4a42961989d7b4c7503300b225838" />
+    <Content Include="Content\.git\objects\b1\9323be782b7fc1a6abcf5dbd9f9ef32a6f8353" />
+    <Content Include="Content\.git\objects\b3\08b594456824fe504ef9094aa4cf723839f1be" />
+    <Content Include="Content\.git\objects\bd\0870479dc771fd41360e3331c9c32265b6e1cf" />
+    <Content Include="Content\.git\objects\c2\072b89dfb86e69b8c52eedc8fb7789b54d79ff" />
+    <Content Include="Content\.git\objects\c2\e39e860743f248614b11de95a3b1283c53665e" />
+    <Content Include="Content\.git\objects\c3\05be3d33db6f9a2f5491fd0510799ebcc792ec" />
+    <Content Include="Content\.git\objects\c5\e4a91df77166aab8da5f342ac43967a0d55eca" />
+    <Content Include="Content\.git\objects\c8\98f1709abde758d752baab367f7af9f4a014ac" />
+    <Content Include="Content\.git\objects\d2\c21660f166a958f8ddad9c0a8269f2c7ea375b" />
+    <Content Include="Content\.git\objects\d3\6e15a6022e2732479a33f4c22083af4432d7b4" />
+    <Content Include="Content\.git\objects\d6\9356983fe86a97029dd0846d84f0ba2e90d4fd" />
+    <Content Include="Content\.git\objects\db\52ac61b13e26838bf870acad2404965eb7b1cd" />
+    <Content Include="Content\.git\objects\dd\e270996b62346918a48cc65f0bc24e3761c3a0" />
+    <Content Include="Content\.git\objects\de\98b2bc843948183d528cc5bdddf09a642894eb" />
+    <Content Include="Content\.git\objects\df\74bfbae3d45bd6d992337b549782799c777a7e" />
+    <Content Include="Content\.git\objects\e4\b2b3f8ae5d4887a8f3ac2bb59d623135ceeaed" />
+    <Content Include="Content\.git\objects\e6\9de29bb2d1d6434b8b29ae775ad8c2e48c5391" />
+    <Content Include="Content\.git\objects\e6\bdb7a4fa23d4ccc555fa610b9981817465e0ff" />
+    <Content Include="Content\.git\objects\e9\14c2bc61b3ae9519bc21f8ac1eb2053963c57c" />
+    <Content Include="Content\.git\objects\e9\744a520a414231566a391eb7f8b4e192c1f166" />
+    <Content Include="Content\.git\objects\ed\776b12947c62ca2e641ebe0abcbc1114baa55b" />
+    <Content Include="Content\.git\objects\ee\30f242a8a25c89644fa1ad68a4adaf288200b2" />
+    <Content Include="Content\.git\objects\ef\fe782d77b74ded13c13b945e82ab31c9ab9829" />
+    <Content Include="Content\.git\objects\f0\8f1ff21153bd35370949e3e0bab493b242ada2" />
+    <Content Include="Content\.git\objects\f1\45fac8ed91589a517eb19db00a035cf58d0f7f" />
+    <Content Include="Content\.git\objects\f3\995ace3bb29d9eefcfe817dcdc908868c8fdd0" />
+    <Content Include="Content\.git\objects\f4\2e86f4dd17241d6a220a6a438d0596cd1c4aa8" />
+    <Content Include="Content\.git\objects\f4\4af836e38534f00103a8af35ee2a36a8359b7b" />
+    <Content Include="Content\.git\objects\f6\f227d97de16d6050b925b68d7bd9925ac80fae" />
+    <Content Include="Content\.git\objects\pack\pack-d2520d970ce0879b4acefa972b35aab6764bedc3.idx" />
+    <Content Include="Content\.git\objects\pack\pack-d2520d970ce0879b4acefa972b35aab6764bedc3.pack" />
+    <Content Include="Content\.git\refs\heads\master" />
+    <Content Include="Content\.git\refs\remotes\origin\master" />
+    <Content Include="Content\css\aroundsearchpage.css.map" />
+    <Content Include="Content\css\autoclub.css.map" />
+    <Content Include="Content\css\bmwclub.css.map" />
+    <Content Include="Content\css\bmwclubgallery.css.map" />
+    <Content Include="Content\css\bmwclubservice.css.map" />
+    <Content Include="Content\css\bmwclubus.css.map" />
+    <Content Include="Content\css\carpage.css.map" />
+    <Content Include="Content\css\carsearch.css.map" />
+    <Content Include="Content\css\catalog.css.map" />
+    <Content Include="Content\css\cataloq.css.map" />
+    <Content Include="Content\css\contacts.css.map" />
+    <Content Include="Content\css\gallery.css.map" />
+    <Content Include="Content\css\loginpage.css.map" />
+    <Content Include="Content\css\news.css.map" />
+    <Content Include="Content\css\opelclub.css.map" />
+    <Content Include="Content\css\opelclubgallery.css.map" />
+    <Content Include="Content\css\opelclubservice.css.map" />
+    <Content Include="Content\css\opelclubus.css.map" />
+    <Content Include="Content\css\registerpage.css.map" />
+    <Content Include="Content\css\style.css.map" />
+    <Content Include="Areas\Cingo\Views\web.config" />
+    <Content Include="Areas\Cingo\Views\Shared\_AdminLayout.cshtml" />
+    <Content Include="Areas\Cingo\Views\AdminHome\Index.cshtml" />
+    <Content Include="Areas\Cingo\Content\fonts\dashboard.eot" />
+    <Content Include="Areas\Cingo\Content\fonts\dashboard.ttf" />
+    <Content Include="Areas\Cingo\Content\fonts\dashboard.woff" />
+    <Content Include="Areas\Cingo\Content\icons-reference\fonts\dashboard.eot" />
+    <Content Include="Areas\Cingo\Content\icons-reference\fonts\dashboard.ttf" />
+    <Content Include="Areas\Cingo\Content\icons-reference\fonts\dashboard.woff" />
+    <Content Include="Areas\Cingo\Content\vendor\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Areas\Cingo\Content\vendor\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Areas\Cingo\Content\vendor\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Areas\Cingo\Content\vendor\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Areas\Cingo\Content\vendor\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery.cookie\component.json" />
+    <Content Include="Areas\Cingo\Content\vendor\jquery.cookie\cookie.jquery.json" />
+    <EntityDeploy Include="Models\Car24Data.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Car24Data.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Car24Data.edmx.diagram">
+      <DependentUpon>Car24Data.edmx</DependentUpon>
+    </Content>
+    <Content Include="Content\sass\aroundsearchpage.scss" />
+    <Content Include="Content\sass\autoclub.scss" />
+    <Content Include="Content\sass\bmwclub.scss" />
+    <Content Include="Content\sass\bmwclubgallery.scss" />
+    <Content Include="Content\sass\bmwclubservice.scss" />
+    <Content Include="Content\sass\bmwclubus.scss" />
+    <Content Include="Content\sass\carpage.scss" />
+    <Content Include="Content\sass\carsearch.scss" />
+    <Content Include="Content\sass\catalog.scss" />
+    <Content Include="Content\sass\contacts.scss" />
+    <Content Include="Content\sass\gallery.scss" />
+    <Content Include="Content\sass\loginpage.scss" />
+    <Content Include="Content\sass\newpage.scss" />
+    <Content Include="Content\sass\news.scss" />
+    <Content Include="Content\sass\opelclub.scss" />
+    <Content Include="Content\sass\opelclubgallery.scss" />
+    <Content Include="Content\sass\opelclubservice.scss" />
+    <Content Include="Content\sass\opelclubus.scss" />
+    <Content Include="Content\sass\registerpage.scss" />
+    <Content Include="Content\sass\style.scss" />
+    <Content Include="Areas\Cingo\Views\AvtoAdvts\Create.cshtml" />
+    <Content Include="Areas\Cingo\Views\AvtoAdvts\Delete.cshtml" />
+    <Content Include="Areas\Cingo\Views\AvtoAdvts\Details.cshtml" />
+    <Content Include="Areas\Cingo\Views\AvtoAdvts\Edit.cshtml" />
+    <Content Include="Areas\Cingo\Views\AvtoAdvts\Index.cshtml" />
+    <Content Include="Areas\Cingo\Views\Galleries\Create.cshtml" />
+    <Content Include="Areas\Cingo\Views\Galleries\Delete.cshtml" />
+    <Content Include="Areas\Cingo\Views\Galleries\Details.cshtml" />
+    <Content Include="Areas\Cingo\Views\Galleries\Edit.cshtml" />
+    <Content Include="Areas\Cingo\Views\Galleries\Index.cshtml" />
+    <Content Include="Areas\Cingo\Views\Markas\Create.cshtml" />
+    <Content Include="Areas\Cingo\Views\Markas\Delete.cshtml" />
+    <Content Include="Areas\Cingo\Views\Markas\Details.cshtml" />
+    <Content Include="Areas\Cingo\Views\Markas\Edit.cshtml" />
+    <Content Include="Areas\Cingo\Views\Markas\Index.cshtml" />
+    <Content Include="Areas\Cingo\Views\Modelss\Create.cshtml" />
+    <Content Include="Areas\Cingo\Views\Modelss\Delete.cshtml" />
+    <Content Include="Areas\Cingo\Views\Modelss\Details.cshtml" />
+    <Content Include="Areas\Cingo\Views\Modelss\Edit.cshtml" />
+    <Content Include="Areas\Cingo\Views\Modelss\Index.cshtml" />
+    <Content Include="Areas\Cingo\Views\Colors\Create.cshtml" />
+    <Content Include="Areas\Cingo\Views\Colors\Delete.cshtml" />
+    <Content Include="Areas\Cingo\Views\Colors\Details.cshtml" />
+    <Content Include="Areas\Cingo\Views\Colors\Edit.cshtml" />
+    <Content Include="Areas\Cingo\Views\Colors\Index.cshtml" />
+    <Content Include="Areas\Cingo\Views\Clubss\Create.cshtml" />
+    <Content Include="Areas\Cingo\Views\Clubss\Delete.cshtml" />
+    <Content Include="Areas\Cingo\Views\Clubss\Details.cshtml" />
+    <Content Include="Areas\Cingo\Views\Clubss\Edit.cshtml" />
+    <Content Include="Areas\Cingo\Views\Clubss\Index.cshtml" />
+    <Content Include="Areas\Cingo\Views\Services\Create.cshtml" />
+    <Content Include="Areas\Cingo\Views\Services\Delete.cshtml" />
+    <Content Include="Areas\Cingo\Views\Services\Details.cshtml" />
+    <Content Include="Areas\Cingo\Views\Services\Edit.cshtml" />
+    <Content Include="Areas\Cingo\Views\Services\Index.cshtml" />
+    <Content Include="Areas\Cingo\Views\AutoShops\Create.cshtml" />
+    <Content Include="Areas\Cingo\Views\AutoShops\Delete.cshtml" />
+    <Content Include="Areas\Cingo\Views\AutoShops\Details.cshtml" />
+    <Content Include="Areas\Cingo\Views\AutoShops\Edit.cshtml" />
+    <Content Include="Areas\Cingo\Views\AutoShops\Index.cshtml" />
+    <Content Include="Areas\Cingo\Views\CarWashes\Create.cshtml" />
+    <Content Include="Areas\Cingo\Views\CarWashes\Delete.cshtml" />
+    <Content Include="Areas\Cingo\Views\CarWashes\Details.cshtml" />
+    <Content Include="Areas\Cingo\Views\CarWashes\Edit.cshtml" />
+    <Content Include="Areas\Cingo\Views\CarWashes\Index.cshtml" />
+    <Content Include="Areas\Cingo\Views\Users\Create.cshtml" />
+    <Content Include="Areas\Cingo\Views\Users\Delete.cshtml" />
+    <Content Include="Areas\Cingo\Views\Users\Details.cshtml" />
+    <Content Include="Areas\Cingo\Views\Users\Edit.cshtml" />
+    <Content Include="Areas\Cingo\Views\Users\Index.cshtml" />
+    <Content Include="Areas\Cingo\Views\UsersTypes\Create.cshtml" />
+    <Content Include="Areas\Cingo\Views\UsersTypes\Delete.cshtml" />
+    <Content Include="Areas\Cingo\Views\UsersTypes\Details.cshtml" />
+    <Content Include="Areas\Cingo\Views\UsersTypes\Edit.cshtml" />
+    <Content Include="Areas\Cingo\Views\UsersTypes\Index.cshtml" />
+    <Content Include="Areas\Cingo\Views\Messages\Create.cshtml" />
+    <Content Include="Areas\Cingo\Views\Messages\Delete.cshtml" />
+    <Content Include="Areas\Cingo\Views\Messages\Details.cshtml" />
+    <Content Include="Areas\Cingo\Views\Messages\Edit.cshtml" />
+    <Content Include="Areas\Cingo\Views\Messages\Index.cshtml" />
+    <Content Include="Areas\Cingo\Views\Newss\Create.cshtml" />
+    <Content Include="Areas\Cingo\Views\Newss\Delete.cshtml" />
+    <Content Include="Areas\Cingo\Views\Newss\Details.cshtml" />
+    <Content Include="Areas\Cingo\Views\Newss\Edit.cshtml" />
+    <Content Include="Areas\Cingo\Views\Newss\Index.cshtml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\AutoClub\Index.cshtml" />
+    <Content Include="Views\Gallery\Index.cshtml" />
+    <Content Include="Views\Catalog\Index.cshtml" />
+    <Content Include="Views\Contacts\Index.cshtml" />
+    <Content Include="Views\CarPage\Index.cshtml" />
+    <Content Include="Views\CarSearch\Index.cshtml" />
+    <Content Include="Views\New\Index.cshtml" />
+    <Content Include="Views\LoginPage\Index.cshtml" />
+    <Content Include="Views\RegisterPage\Index.cshtml" />
+    <Content Include="Views\AroundSearchPage\Index.cshtml" />
+    <Content Include="Views\Shared\_BmwClubLayout.cshtml" />
+    <Content Include="Views\BmwClub\Index.cshtml" />
+    <Content Include="Views\BmwClubService\Index.cshtml" />
+    <Content Include="Views\BmwClubGallery\Index.cshtml" />
+    <Content Include="Views\Shared\_OpelClubLayout.cshtml" />
+    <Content Include="Views\OpelClub\Index.cshtml" />
+    <Content Include="Views\OpelClubGallery\Index.cshtml" />
+    <Content Include="Views\OpelClubService\Index.cshtml" />
+    <Content Include="Views\OpelClubUs\Index.cshtml" />
+    <Content Include="Views\BmwClubUs\Index.cshtml" />
+    <Content Include="Views\News\Index.cshtml" />
+    <Content Include="Views\avtoAdvtss\Create.cshtml" />
+    <Content Include="Views\avtoAdvtss\Delete.cshtml" />
+    <Content Include="Views\avtoAdvtss\Details.cshtml" />
+    <Content Include="Views\avtoAdvtss\Edit.cshtml" />
+    <Content Include="Views\avtoAdvtss\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Areas\Cingo\Content\vendor\chart.js\docs\" />
+    <Folder Include="Areas\Cingo\Content\vendor\font-awesome\less\" />
+    <Folder Include="Areas\Cingo\Content\vendor\font-awesome\scss\" />
+    <Folder Include="Areas\Cingo\Content\vendor\jquery.cookie\test\" />
+    <Folder Include="Areas\Cingo\Models\" />
+    <Folder Include="Content\.git\objects\info\" />
+    <Folder Include="Content\.git\refs\tags\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61469</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:61469/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

@@ -1,0 +1,87 @@
+body{background-color:#f6f6f6}
+.fulllWidth{width:100%}
+.width{width:90%}
+.main{margin:0 auto}
+.navBarSection .navbar{background-color:rgba(0,0,0,.7);margin:0 auto;padding:0}
+.navBarSection .navbar button{background-color:#fff}
+.navBarSection .navbar .navbar-brand img{width:50%}
+.navBarSection .navbar span input{color:#fff;background-color:rgba(0,0,0,.1);height:20px;width:200px;border-radius:.5rem}
+.navBarSection .navbar span input .btn{padding:0}
+.navBarSection .navbar .collapse .navbar-text{padding-bottom:0}
+.navBarSection .navbar .collapse .navbar-text .login-and-languages{margin-bottom:5px;text-align:right;color:#fff}
+.navBarSection .navbar .collapse .navbar-text .login-and-languages a{margin-right:15px}
+.navBarSection .navbar .collapse .navbar-text .login-and-languages a:hover{margin-right:15px;color:green;text-decoration:none}
+.navBarSection .navbar .collapse .navbar-text .loginPassword{text-align:right;margin-bottom:5px}
+.navBarSection .navbar .collapse .navbar-text .loginPassword li{display:inline-block;margin-right:15px}
+.navBarSection .navbar .collapse .navbar-text .loginPassword li input{width:150px;font-size:80%;border:.5px}
+.navBarSection .navbar .collapse .navbar-text .loginPassword li button{background-color:gray;height:20px;color:#000;text-size:5px;line-height:.25;border:.5px solid green}
+.navBarSection .navbar .collapse .navbar-text .loginPassword li button:hover{background-color:red}
+.navBarSection .navbar .collapse .navbar-text .nav-tabs .nav-item .nav-link{padding:10px 8px;color:#fff;font-weight:500;font-size:15px}
+.navBarSection .navbar .collapse .navbar-text .nav-tabs .nav-item .active{background-color:red}
+.navBarSection .navbar .collapse .navbar-text .nav-tabs .nav-item:hover{background-color:red;transition:.7s}
+.sliderSection{box-shadow:0 0 500px 0 #000;overflow:hidden}
+.sliderSection .slide .carousel-inner .carousel-item{width:100%;height:600px}
+.sliderSection .slide .carousel-inner .carousel-item img{height:auto}
+.sliderSection .slide .carousel-inner .carousel-item .carousel-caption{right:0;left:0;padding-top:0;padding-bottom:0;padding-left:0;width:100%;background-color:rgba(0,0,0,.5)}
+.car360panel{background-color:#134564}
+.car360panel .row{margin:0 auto}
+.car360panel .row .col-md-12{display:flex}
+.car360panel .row .col-md-12 .logoImage img{width:150%}
+.car360panel .row .col-md-8{text-align:center}
+.car360panel .row .col-md-8 h2{margin-top:25px;color:#fff}
+.car360panel .row .button{text-align:center}
+.car360panel .row .button button{margin-top:25px;background-color:red;border-radius:8px;border:0;color:#fff;width:150px;height:40px}
+.autoSaleSection{padding-top:20px;padding-bottom:20px}
+.autoSaleSection .row{margin:0 auto}
+.autoSaleSection .row .leftPanel{padding-left:0;padding-right:0}
+.autoSaleSection .row .leftPanel h2{padding-right:15px}
+.autoSaleSection .row .leftPanel h2 button{float:right}
+.autoSaleSection .row .leftPanel h2 button:hover{background-color:red}
+.autoSaleSection .row .leftPanel .col-md-12{padding-left:0;padding-right:0}
+.autoSaleSection .row .leftPanel .col-md-12 .col-md-3{float:left;display:inline-block;padding-left:1px;padding-right:1px;overflow:hidden;margin-bottom:3px}
+.autoSaleSection .row .leftPanel .col-md-12 .col-md-3 img{width:100%}
+.autoSaleSection .row .leftPanel .col-md-12 .col-md-3 a{color:#000;text-decoration:none}
+.autoSaleSection .row .leftPanel .col-md-12 .col-md-3:hover{border:1px solid #000;box-sizing:border-box}
+.autoSaleSection .row .rightPanel{padding-right:0}
+.autoSaleSection .row .rightPanel .row .leftCollumn{padding-left:0}
+.autoSaleSection .row .rightPanel .row .leftCollumn h5{margin-bottom:0}
+.autoSaleSection .row .rightPanel .row .leftCollumn select{width:100%;height:30px}
+.autoSaleSection .row .rightPanel .row .leftCollumn .year{width:100%}
+.autoSaleSection .row .rightPanel .row .leftCollumn .year h5{display:block;margin-bottom:0}
+.autoSaleSection .row .rightPanel .row .leftCollumn .year input{float:left}
+.autoSaleSection .row .rightPanel .row .leftCollumn .price input{float:left}
+.autoSaleSection .row .rightPanel .row .leftCollumn .Buttons{margin-top:10px}
+.autoSaleSection .row .rightPanel .row .leftCollumn .Buttons button:hover{background-color:red}
+.autoSaleSection .row .rightPanel .row .rightNewsFeed{padding-right:0}
+.autoSaleSection .row .rightPanel .row .rightNewsFeed .newsBox{box-shadow:0 0 5px 0 #000;overflow:hidden;border:1px solid #000;height:80px;margin:10px 0;border-radius:8px}
+.autoSaleSection .row .rightPanel .row .rightNewsFeed .newsBox .newsImage{display:inline-block;margin:0;padding:0}
+.autoSaleSection .row .rightPanel .row .rightNewsFeed .newsBox .newsImage img{width:100%}
+.autoSaleSection .row .rightPanel .row .rightNewsFeed .newsBox .newsText{float:right;display:inline-block;padding:0}
+.autoSaleSection .row .rightPanel .row .rightNewsFeed .newsBox .newsText p{display:inline-block}
+.autoSaleSection .row .rightPanel .row .rightNewsFeed .newsBox:hover{box-shadow:0 0 10px 0 #000;border:2px solid #000;transition:.4s}
+.carClubSlider{box-shadow:500px 0 0 0 #000;background-image:url(../image/car_logo/parallax.jpg);overflow:hidden;background-attachment:fixed;background-position:center;background-repeat:no-repeat;background-size:cover}
+.carClubSlider .row{margin:0 auto;margin-top:60px;height:150px}
+.carClubSlider .row .col-md-2{width:100%;height:70px;text-align:center}
+.carClubSlider .row .col-md-2 img{text-align:center;height:100%;overflow:hidden}
+.carClubSlider .row .col-md-2 h2{text-align:center}
+.carClubSlider .row .col-md-2:hover{width:100%;height:70px;margin-top:-20px;transition:.5s}
+.carClubSlider .row .col-md-2:hover img{height:120%;transition:.7s;overflow:hidden}
+.carClubSlider .row .col-md-2:hover h2{text-align:center;font-size:40px;transition:.7s}
+.carClubSlider .row .col-md-2:hover h2 i{color:#00f;text-decoration:none;transition:.5s}
+.gallerySection{padding-top:20px;padding-bottom:40px;padding-right:0;padding-left:0}
+.gallerySection h1{padding-bottom:10px}
+.gallerySection .gallery{margin:0 auto}
+.gallerySection .container .row .col-md-3{overflow:hidden;padding-left:0;padding-right:0}
+.gallerySection .container .row img{width:100%;filter:gray;-webkit-box-shadow:0 2px 6px 2px rgba(0,0,0,.75);-moz-box-shadow:0 2px 6px 2px rgba(0,0,0,.75);box-shadow:0 2px 6px 2px rgba(0,0,0,.75)}
+.footer{background-image:url(../image/footer-parallax.jpg);background-attachment:fixed;background-position:center;background-repeat:no-repeat;background-size:cover;color:#fff}
+.footer .backDiv{background-color:#000}
+.footer .backDiv .container .row{margin-top:0!important;margin-bottom:0!important}
+.footer .backDiv .container .row .col-md-4 h5{margin-top:1.5rem!important}
+.footer .backDiv .container .row .navbar-link{margin-left:0}
+.footer .backDiv .container .row .navbar-link ul{padding-left:0}
+.footer .backDiv .container .row .navbar-link ul p{margin:0}
+.footer .backDiv .container .row .navbar-link ul p a{color:#fff}
+.footer .backDiv .container .row .navbar-link ul p a:hover{text-decoration:none;text-size:25}
+.footer .backDiv .container .row .contactUs{color:#fff}
+.footer .backDiv .container .row .contactUs input{border-radius:5px;height:25px;color:#fff;margin:10px 0;width:100%;background-color:rgba(0,0,0,.5)}
+.footer .backDiv .container .row .contactUs textarea{border-radius:5px;height:90px;color:#fff;margin:10px 0;width:100%;background-color:rgba(0,0,0,.5)}

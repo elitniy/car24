@@ -1,0 +1,169 @@
+﻿@model car24project.Models.avtoAdvt
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Cingo/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>avtoAdvt</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.photo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.photo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mileage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mileage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.additionalInfo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.additionalInfo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.contactsName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.contactsName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.publicDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.publicDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.viewSize)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.viewSize)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.bodyType1.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bodyType1.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.color.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.color.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.driveUnit.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.driveUnit.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.engineVolume.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.engineVolume.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fuelType.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fuelType.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.graduationYear.id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.graduationYear.id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.marka.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.marka.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.model.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.model.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.motorPower.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.motorPower.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.transmission.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.transmission.name)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,118 @@
+body {
+  background-image: url("../image/backgrimage.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.fulllWidth {
+  width: 100%; }
+
+.width {
+  width: 90%; }
+
+.main {
+  margin: 0px auto; }
+
+.navBarSection .navbar {
+  background-color: rgba(0, 0, 0, 0.7);
+  margin: 0px auto;
+  padding: 0px; }
+  .navBarSection .navbar button {
+    background-color: white; }
+  .navBarSection .navbar .navbar-brand img {
+    width: 50%; }
+  .navBarSection .navbar span input {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.1);
+    height: 20px;
+    width: 200px;
+    border-radius: .50rem; }
+    .navBarSection .navbar span input .btn {
+      padding: 0px; }
+  .navBarSection .navbar .collapse .navbar-text {
+    padding-bottom: 0px; }
+    .navBarSection .navbar .collapse .navbar-text .login-and-languages {
+      margin-bottom: 5px;
+      text-align: right;
+      color: white; }
+      .navBarSection .navbar .collapse .navbar-text .login-and-languages a {
+        margin-right: 15px; }
+      .navBarSection .navbar .collapse .navbar-text .login-and-languages a:hover {
+        margin-right: 15px;
+        color: green;
+        text-decoration: none; }
+    .navBarSection .navbar .collapse .navbar-text .nav-tabs .nav-item .nav-link {
+      padding: 10px 8px;
+      color: white;
+      font-weight: 500;
+      font-size: 15px; }
+    .navBarSection .navbar .collapse .navbar-text .nav-tabs .nav-item .active {
+      background-color: red; }
+    .navBarSection .navbar .collapse .navbar-text .nav-tabs .nav-item:hover {
+      background-color: red;
+      transition: 0.7s; }
+
+.registerSection .container {
+  padding-top: 20px;
+  padding-bottom: 20px; }
+  .registerSection .container .form-horizontal {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); }
+    .registerSection .container .form-horizontal .form-group .col-sm-9 {
+      max-width: 100%; }
+    .registerSection .container .form-horizontal .form-group .sosialLinks {
+      text-align: center;
+      padding-top: 10px; }
+      .registerSection .container .form-horizontal .form-group .sosialLinks a {
+        padding: 5px; }
+
+*[role="form"] {
+  max-width: 50%;
+  padding: 2px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 0.3em; }
+
+*[role="form"] h2 {
+  margin-left: 5em;
+  margin-bottom: 1em; }
+
+.footer {
+  color: white; }
+  .footer .backDiv {
+    background-color: black; }
+    .footer .backDiv .container .row {
+      margin-top: 0rem !important;
+      margin-bottom: 0rem !important; }
+      .footer .backDiv .container .row .col-md-4 h5 {
+        margin-top: 1.5rem !important; }
+      .footer .backDiv .container .row .navbar-link {
+        margin-left: 0px; }
+        .footer .backDiv .container .row .navbar-link ul {
+          padding-left: 0px; }
+          .footer .backDiv .container .row .navbar-link ul p {
+            margin: 0px; }
+            .footer .backDiv .container .row .navbar-link ul p a {
+              color: white; }
+            .footer .backDiv .container .row .navbar-link ul p a:hover {
+              text-decoration: none;
+              text-size: 25; }
+      .footer .backDiv .container .row .contactUs {
+        color: white; }
+        .footer .backDiv .container .row .contactUs input {
+          border-radius: 5px;
+          height: 25px;
+          color: white;
+          margin: 10px 0px;
+          width: 100%;
+          background-color: rgba(0, 0, 0, 0.5); }
+        .footer .backDiv .container .row .contactUs textarea {
+          border-radius: 5px;
+          height: 90px;
+          color: white;
+          margin: 10px 0px;
+          width: 100%;
+          background-color: rgba(0, 0, 0, 0.5); }
+
+/*# sourceMappingURL=registerpage.css.map */

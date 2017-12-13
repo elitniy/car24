@@ -1,0 +1,148 @@
+body {
+  background-image: url("../image/backgrimage.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.fulllWidth {
+  width: 100%; }
+
+.width {
+  width: 90%; }
+
+.main {
+  margin: 0px auto; }
+
+.navBarSection .navbar {
+  background-color: rgba(0, 0, 0, 0.7);
+  margin: 0px auto;
+  padding: 0px; }
+  .navBarSection .navbar button {
+    background-color: white; }
+  .navBarSection .navbar .navbar-brand img {
+    width: 50%; }
+  .navBarSection .navbar span input {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.1);
+    height: 20px;
+    width: 200px;
+    border-radius: .50rem; }
+    .navBarSection .navbar span input .btn {
+      padding: 0px; }
+  .navBarSection .navbar .collapse .navbar-text {
+    padding-bottom: 0px; }
+    .navBarSection .navbar .collapse .navbar-text .login-and-languages {
+      margin-bottom: 5px;
+      text-align: right;
+      color: white; }
+      .navBarSection .navbar .collapse .navbar-text .login-and-languages a {
+        margin-right: 15px; }
+      .navBarSection .navbar .collapse .navbar-text .login-and-languages a:hover {
+        margin-right: 15px;
+        color: green;
+        text-decoration: none; }
+    .navBarSection .navbar .collapse .navbar-text .nav-tabs .nav-item .nav-link {
+      padding: 10px 8px;
+      color: white;
+      font-weight: 500;
+      font-size: 15px; }
+    .navBarSection .navbar .collapse .navbar-text .nav-tabs .nav-item .active {
+      background-color: red; }
+    .navBarSection .navbar .collapse .navbar-text .nav-tabs .nav-item:hover {
+      background-color: red;
+      transition: 0.7s; }
+
+.loginSection {
+  padding-bottom: 100px;
+  margin: 0px;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Full-width inputs */
+  /* Set a style for all buttons */
+  /* Add a hover effect for buttons */
+  /* Extra style for the cancel button (red) */
+  /* Center the avatar image inside this container */
+  /* Avatar image */
+  /* Add padding to containers */
+  /* The "Forgot password" text */
+  /* Change styles for span and cancel button on extra small screens */ }
+  .loginSection input[type=text], .loginSection input[type=password] {
+    width: 100%;
+    margin: 8px 0;
+    display: inline-block;
+    border-radius: 5px; }
+  .loginSection input {
+    text-color: white; }
+  .loginSection button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px; }
+  .loginSection button:hover {
+    opacity: 0.8; }
+  .loginSection .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336; }
+  .loginSection .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0; }
+  .loginSection img.avatar {
+    width: 40%;
+    border-radius: 50%; }
+  .loginSection .container {
+    width: 30%;
+    border-radius: 5px; }
+  .loginSection span.psw {
+    float: right;
+    padding-top: 16px; }
+  @media screen and (max-width: 300px) {
+    .loginSection span.psw {
+      display: block;
+      float: none; }
+    .loginSection .cancelbtn {
+      width: 100%; } }
+
+/* Bordered form */
+.footer {
+  color: white; }
+  .footer .backDiv {
+    background-color: black; }
+    .footer .backDiv .container .row {
+      margin-top: 0rem !important;
+      margin-bottom: 0rem !important; }
+      .footer .backDiv .container .row .col-md-4 h5 {
+        margin-top: 1.5rem !important; }
+      .footer .backDiv .container .row .navbar-link {
+        margin-left: 0px; }
+        .footer .backDiv .container .row .navbar-link ul {
+          padding-left: 0px; }
+          .footer .backDiv .container .row .navbar-link ul p {
+            margin: 0px; }
+            .footer .backDiv .container .row .navbar-link ul p a {
+              color: white; }
+            .footer .backDiv .container .row .navbar-link ul p a:hover {
+              text-decoration: none;
+              text-size: 25; }
+      .footer .backDiv .container .row .contactUs {
+        color: white; }
+        .footer .backDiv .container .row .contactUs input {
+          border-radius: 5px;
+          height: 25px;
+          color: white;
+          margin: 10px 0px;
+          width: 100%;
+          background-color: rgba(0, 0, 0, 0.5); }
+        .footer .backDiv .container .row .contactUs textarea {
+          border-radius: 5px;
+          height: 90px;
+          color: white;
+          margin: 10px 0px;
+          width: 100%;
+          background-color: rgba(0, 0, 0, 0.5); }
+
+/*# sourceMappingURL=loginpage.css.map */

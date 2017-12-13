@@ -1,0 +1,143 @@
+bmwclubservicebody {
+  background-color: #f6f6f6; }
+
+.fulllWidth {
+  width: 100%; }
+
+.width {
+  width: 90%; }
+
+.main {
+  margin: 0px auto; }
+  .main .register {
+    background-color: red; }
+
+.navBarSection {
+  box-shadow: 0 0px 200px 0px black; }
+  .navBarSection .navbar {
+    background-color: black;
+    margin: 0px auto;
+    padding: 0px; }
+    .navBarSection .navbar button {
+      background-color: white;
+      border-radius: 25px; }
+    .navBarSection .navbar .navbar-brand img {
+      width: 50%; }
+    .navBarSection .navbar span input {
+      color: white;
+      background-color: rgba(0, 0, 0, 0.9);
+      height: 20px;
+      width: 200px;
+      border-radius: 50rem; }
+      .navBarSection .navbar span input .btn {
+        padding: 0px; }
+    .navBarSection .navbar .collapse .navbar-text {
+      padding-bottom: 0px; }
+      .navBarSection .navbar .collapse .navbar-text .login-and-languages {
+        margin-bottom: 5px;
+        text-align: right;
+        color: white; }
+        .navBarSection .navbar .collapse .navbar-text .login-and-languages a {
+          margin-right: 15px; }
+        .navBarSection .navbar .collapse .navbar-text .login-and-languages a:hover {
+          margin-right: 15px;
+          color: green;
+          text-decoration: none; }
+      .navBarSection .navbar .collapse .navbar-text .loginPassword {
+        text-align: right;
+        margin-bottom: 5px; }
+        .navBarSection .navbar .collapse .navbar-text .loginPassword li {
+          display: inline-block;
+          margin-right: 15px; }
+          .navBarSection .navbar .collapse .navbar-text .loginPassword li input {
+            width: 150px;
+            font-size: 80%;
+            border: 0.5px; }
+          .navBarSection .navbar .collapse .navbar-text .loginPassword li button {
+            background-color: gray;
+            height: 20px;
+            color: black;
+            text-size: 5px;
+            line-height: 0.25;
+            border: 0.5px solid green; }
+          .navBarSection .navbar .collapse .navbar-text .loginPassword li button:hover {
+            background-color: red; }
+      .navBarSection .navbar .collapse .navbar-text .nav-tabs .nav-item .nav-link {
+        padding: 10px 8px;
+        color: white;
+        font-weight: 500;
+        font-size: 15px; }
+      .navBarSection .navbar .collapse .navbar-text .nav-tabs .nav-item .active {
+        background-color: red; }
+      .navBarSection .navbar .collapse .navbar-text .nav-tabs .nav-item:hover {
+        background-color: red;
+        transition: 0.7s; }
+
+.clubNavBar {
+  background-color: #0066e1; }
+  .clubNavBar .nav-tabs {
+    margin: 0px auto;
+    background-color: #0066e1;
+    line-height: 0.5; }
+    .clubNavBar .nav-tabs .nav-item .nav-link {
+      color: white; }
+    .clubNavBar .nav-tabs .nav-item .active {
+      color: black; }
+
+.gallerySection {
+  padding-bottom: 20px;
+  padding-top: 20px; }
+  .gallerySection .gallery {
+    margin: 0px auto; }
+    .gallerySection .gallery .col-md-3 {
+      float: left;
+      padding: 2px;
+      display: inline-block; }
+      .gallerySection .gallery .col-md-3 img {
+        width: 100%;
+        height: auto; }
+
+.footer {
+  box-shadow: 0 0px 200px 0px black;
+  background-color: black;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white; }
+  .footer .backDiv {
+    background-color: rgba(0, 0, 0, 0.5); }
+    .footer .backDiv .container .row {
+      margin-top: 0rem !important;
+      margin-bottom: 0rem !important; }
+      .footer .backDiv .container .row .col-md-4 h5 {
+        margin-top: 1.5rem !important; }
+      .footer .backDiv .container .row .navbar-link {
+        margin-left: 0px; }
+        .footer .backDiv .container .row .navbar-link ul {
+          padding-left: 0px; }
+          .footer .backDiv .container .row .navbar-link ul p {
+            margin: 0px; }
+            .footer .backDiv .container .row .navbar-link ul p a {
+              color: white; }
+            .footer .backDiv .container .row .navbar-link ul p a:hover {
+              text-decoration: none;
+              text-size: 25; }
+      .footer .backDiv .container .row .contactUs {
+        color: white; }
+        .footer .backDiv .container .row .contactUs input {
+          border-radius: 5px;
+          height: 25px;
+          color: white;
+          margin: 10px 0px;
+          width: 100%;
+          background-color: rgba(0, 0, 0, 0.5); }
+        .footer .backDiv .container .row .contactUs textarea {
+          border-radius: 5px;
+          height: 90px;
+          color: white;
+          margin: 10px 0px;
+          width: 100%;
+          background-color: rgba(0, 0, 0, 0.5); }
+
+/*# sourceMappingURL=bmwclubgallery.css.map */

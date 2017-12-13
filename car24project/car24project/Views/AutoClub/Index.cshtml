@@ -1,0 +1,150 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+        <div class="container-fluid fullWidth">
+            <div class="container width ">
+                <div class="row">
+                    <div class="col-md-4 col-sm-12"></div>
+                    <div class="col-md-4 col-sm-12">
+                        <div class="col-md-6"></div>
+                        <div class="col-md-6"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- START CLUB LOGO SLIDER SEXTION -->
+
+        <div class="clubLogoSection fullWidth fixed">
+            <div class="width">
+                <div class="col-md-12 offset-md-3 ">
+                    <div class="carousel slide text-center" id="myCarousel" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="col-md-3">
+                                    <a href='@Url.Action("Index", "OpelClub")'>
+                                        <img src="~/Content/image/car_logo/opel.png" class="img-fluid ">
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="#">
+                                        <img src="~/Content/image/car_logo/hyundai.png" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="#">
+                                        <img src="~/Content/image/car_logo/opel.png" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href='@Url.Action("Index", "BmwClub")'>
+                                        <img src="~/Content/image/car_logo/bmw.png" class="img-fluid">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-md-3">
+                                    <a href="#">
+                                        <img src="~/Content/image/car_logo/toyota.png" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="#">
+                                        <img src="~/Content/image/car_logo/audi.png" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="#">
+                                        <img src="~/Content/image/car_logo/mersedes_benz.png" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="#">
+                                        <img src="~/Content/image/car_logo/hyundai.png" class="img-fluid">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="left carousel-control mt-3 p-4" href="#myCarousel" data-slide="prev"> <i class="fa fa-chevron-left"></i> </a>
+                        <a class="right carousel-control mt-3 p-4" href="#myCarousel" data-slide="next"> <i class="fa fa-chevron-right"></i> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- END CLUN LOGO SLIDER SECTION -->
+        <!-- START NEVS SLIDER SECTION -->
+
+        <div class="sliderSection fullWidth">
+            <div class="container width">
+                <div class="col-md-4 newsPanel">
+                    <h2>Xəbərlər</h2>
+                    <div class="newsBox">
+                        <div class="newsImage col-md-4">
+                            <img src="~/Content/image/news/news1.jpg">
+                        </div>
+                        <div class="newsText col-md-8">
+                            <h5>news title</h5>
+                            <p>This BMW car logo PNG brand image image with transparent background you can download for free, just click on it and save. </p>
+                        </div>
+                    </div>
+                    <div class="newsBox">
+                        <div class="newsImage col-md-4">
+                            <img src="~/Content/image/news/news1.jpg">
+                        </div>
+                        <div class="newsText col-md-8">
+                            <h5>news title</h5>
+                            <p>lThis BMW car logo PNG brand image image with transparent background you can download for free, just click on it and save. </p>
+                        </div>
+                    </div>
+                    <div class="newsBox">
+                        <div class="newsImage col-md-4">
+                            <img src="~/Content/image/news/news1.jpg">
+                        </div>
+                        <div class="newsText col-md-8">
+                            <h5>news title</h5>
+                            <p>This BMW car logo PNG brand image image with transparent background you can download for free, just click on it and save. </p>
+                        </div>
+                    </div>
+                    <div class="newsBox">
+                        <div class="newsImage col-md-4">
+                            <img src="~/Content/image/news/news1.jpg">
+                        </div>
+                        <div class="newsText col-md-8">
+                            <h5>news title</h5>
+                            <p>This BMW car logo PNG brand image image with transparent background you can download for free, just click on it and save. </p>
+                        </div>
+                    </div>
+                    <div class="newsBox">
+                        <div class="newsImage col-md-4">
+                            <img src="~/Content/image/news/news1.jpg">
+                        </div>
+                        <div class="newsText col-md-8">
+                            <h5>news title</h5>
+                            <p>This BMW car logo PNG brand image image with transparent background you can download for free, just click on it and save. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 menuBoxes">
+                    <div class="col-md-6 leftPanel">
+                        <div class="col-md-12 box">
+                            <H1><i class="fa fa-tachometer" aria-hidden="true"></i> MAĞAZALAR</H1>
+                        </div>
+                        <div class="col-md-12 box">
+                            <H1> <i class="fa fa-wrench" aria-hidden="true"></i>       TƏMIR</H1>
+                        </div>
+                    </div>
+                    <div class="col-md-6 rightPanel">
+                        <div class="col-md-12 box">
+                            <H1><i class="fa fa-car" aria-hidden="true"></i>   AVTO TƏMİZLİK</H1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- END NEWS SLIDER SECTION -->
+s

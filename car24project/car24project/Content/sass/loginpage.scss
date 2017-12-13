@@ -1,0 +1,192 @@
+body{
+	background-image:url('../image/backgrimage.jpg');
+	background-attachment: fixed;
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+}
+$fulllWidth:100%;
+$width:90%;
+
+.fulllWidth{
+	width:$fulllWidth;
+}
+.width{
+	width:$width;
+}
+.main{
+	margin:0px auto;
+}
+
+$color-orange:rgb(242,255,0);
+$color-whire:rgb(255,255,255);
+
+
+// top of the navigation bar
+.navBarSection{
+
+	.navbar{
+		background-color: rgba(0, 0, 0, 0.7);
+		margin:0px auto;
+		padding:0px;
+		button{
+			background-color: white;
+		}
+		.navbar-brand{
+			img{
+				width: 50%;
+			}
+		}
+		span{
+			input{
+				color:white;
+    			background-color: rgba(0, 0, 0, 0.1);
+				height: 20px;
+				width: 200px;
+				border-radius: .50rem;
+				    .btn{
+				    	padding:0px;
+				    }
+			}
+		}
+		.collapse{
+			.navbar-text{
+				.login-and-languages{
+					margin-bottom: 5px;
+					text-align: right;
+					color: white;
+
+						a{
+							margin-right:15px;
+						}
+						a:hover{
+							margin-right:15px;
+							color: green;
+							text-decoration: none;
+						}
+				}
+				padding-bottom:0px;
+					.nav-tabs {
+						.nav-item{
+							.nav-link{
+								padding:10px 8px;
+								color:$color-whire;
+								font-weight:500;
+								font-size: 15px;
+							}
+							.active{
+								background-color:red;
+							}
+						}
+						.nav-item:hover{
+							background-color:red;
+							transition: 0.7s;
+						}
+				}
+
+			}
+		}
+	}
+}
+.loginSection{
+	padding-bottom:100px;
+	margin:0px;
+	background-color: rgba(0, 0, 0, 0.5);
+	form {
+
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+    width: 100%;
+    margin: 8px 0;
+    display: inline-block;
+    border-radius:5px;
+}
+input{
+	text-color:white;	
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius:5px;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+    opacity: 0.8;
+}
+/* Extra style for the cancel button (red) */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Center the avatar image inside this container */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+/* Avatar image */
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+/* Add padding to containers */
+.container{
+width:30%;
+border-radius:5px;
+}
+
+/* The "Forgot password" text */
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+    .cancelbtn {
+        width: 100%;
+    }
+}
+}
+/* Bordered form */
+
+.footer {
+    .backDiv {
+        background-color: black;
+        color: white;
+
+        .container {
+            padding: 0px;
+
+            .row {
+                padding: 0px;
+
+                .col-md-7 {
+                    h5 {
+                        padding-top: 10px;
+                    }
+                }
+                .col-lg-3 {
+                    float: right;
+                }
+            }
+        }
+    }
+}

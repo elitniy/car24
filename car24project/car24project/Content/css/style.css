@@ -1,0 +1,253 @@
+body {
+  background-color: #f6f6f6; }
+
+.fulllWidth {
+  width: 100%; }
+
+.width {
+  width: 90%; }
+
+.main {
+  margin: 0px auto; }
+
+.navBarSection .navbar {
+  background-color: rgba(0, 0, 0, 0.7);
+  margin: 0px auto;
+  padding: 0px; }
+  .navBarSection .navbar button {
+    background-color: white; }
+  .navBarSection .navbar .navbar-brand img {
+    width: 50%; }
+  .navBarSection .navbar span input {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.1);
+    height: 20px;
+    width: 200px;
+    border-radius: .50rem; }
+    .navBarSection .navbar span input .btn {
+      padding: 0px; }
+  .navBarSection .navbar .collapse .navbar-text {
+    padding-bottom: 0px; }
+    .navBarSection .navbar .collapse .navbar-text .login-and-languages {
+      margin-bottom: 5px;
+      text-align: right;
+      color: white; }
+      .navBarSection .navbar .collapse .navbar-text .login-and-languages a {
+        margin-right: 15px; }
+      .navBarSection .navbar .collapse .navbar-text .login-and-languages a:hover {
+        margin-right: 15px;
+        color: green;
+        text-decoration: none; }
+    .navBarSection .navbar .collapse .navbar-text .loginPassword {
+      text-align: right;
+      margin-bottom: 5px; }
+      .navBarSection .navbar .collapse .navbar-text .loginPassword li {
+        display: inline-block;
+        margin-right: 15px; }
+        .navBarSection .navbar .collapse .navbar-text .loginPassword li input {
+          width: 150px;
+          font-size: 80%;
+          border: 0.5px; }
+        .navBarSection .navbar .collapse .navbar-text .loginPassword li button {
+          background-color: gray;
+          height: 20px;
+          color: black;
+          text-size: 5px;
+          line-height: 0.25;
+          border: 0.5px solid green; }
+        .navBarSection .navbar .collapse .navbar-text .loginPassword li button:hover {
+          background-color: red; }
+    .navBarSection .navbar .collapse .navbar-text .nav-tabs .nav-item .nav-link {
+      padding: 10px 8px;
+      color: white;
+      font-weight: 500;
+      font-size: 15px; }
+    .navBarSection .navbar .collapse .navbar-text .nav-tabs .nav-item .active {
+      background-color: red; }
+    .navBarSection .navbar .collapse .navbar-text .nav-tabs .nav-item:hover {
+      background-color: red;
+      transition: 0.7s; }
+
+.sliderSection {
+  box-shadow: 0 0px 500px 0px black;
+  overflow: hidden; }
+  .sliderSection .slide .carousel-inner .carousel-item {
+    width: 100%;
+    height: 600px; }
+    .sliderSection .slide .carousel-inner .carousel-item img {
+      height: auto; }
+    .sliderSection .slide .carousel-inner .carousel-item .carousel-caption {
+      right: 0;
+      left: 0;
+      padding-top: 0px;
+      padding-bottom: 0px;
+      padding-left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5); }
+
+.car360panel {
+  background-color: #134564; }
+  .car360panel .row {
+    margin: 0px auto; }
+    .car360panel .row .col-md-12 {
+      display: flex; }
+      .car360panel .row .col-md-12 .logoImage img {
+        width: 150%; }
+    .car360panel .row .col-md-8 {
+      text-align: center; }
+      .car360panel .row .col-md-8 h2 {
+        margin-top: 25px;
+        color: white; }
+    .car360panel .row .button {
+      text-align: center; }
+      .car360panel .row .button button {
+        margin-top: 25px;
+        background-color: red;
+        border-radius: 8px;
+        border: 0px;
+        color: white;
+        width: 150px;
+        height: 40px; }
+
+.autoSaleSection {
+  padding-top: 20px;
+  padding-bottom: 20px; }
+  .autoSaleSection .row {
+    margin: 0px auto; }
+    .autoSaleSection .row .leftPanel {
+      padding-left: 0px;
+      padding-right: 0px; }
+      .autoSaleSection .row .leftPanel h2 {
+        padding-right: 15px; }
+        .autoSaleSection .row .leftPanel h2 button {
+          float: right; }
+        .autoSaleSection .row .leftPanel h2 button:hover {
+          background-color: red; }
+      .autoSaleSection .row .leftPanel .col-md-12 {
+        padding-left: 0px;
+        padding-right: 0px; }
+        .autoSaleSection .row .leftPanel .col-md-12 .col-md-3 {
+          float: left;
+          display: inline-block;
+          padding-left: 1px;
+          padding-right: 1px;
+          overflow: hidden;
+          margin-bottom: 3px; }
+          .autoSaleSection .row .leftPanel .col-md-12 .col-md-3 img {
+            width: 100%; }
+          .autoSaleSection .row .leftPanel .col-md-12 .col-md-3 a {
+            color: gray;
+            text-decoration: none; }
+        .autoSaleSection .row .leftPanel .col-md-12 .col-md-3:hover {
+          box-sizing: border-box; }
+          .autoSaleSection .row .leftPanel .col-md-12 .col-md-3:hover a {
+            color: black; }
+    .autoSaleSection .row .rightPanel {
+      padding-right: 0px; }
+      .autoSaleSection .row .rightPanel .row .leftCollumn {
+        padding-left: 100px; }
+        .autoSaleSection .row .rightPanel .row .leftCollumn h5 {
+          margin-bottom: 0px; }
+        .autoSaleSection .row .rightPanel .row .leftCollumn select {
+          width: 100%;
+          height: 30px; }
+        .autoSaleSection .row .rightPanel .row .leftCollumn .year {
+          width: 100%; }
+          .autoSaleSection .row .rightPanel .row .leftCollumn .year h5 {
+            display: block;
+            margin-bottom: 0px; }
+          .autoSaleSection .row .rightPanel .row .leftCollumn .year input {
+            float: left; }
+        .autoSaleSection .row .rightPanel .row .leftCollumn .price input {
+          float: left; }
+        .autoSaleSection .row .rightPanel .row .leftCollumn .Buttons {
+          margin-top: 10px; }
+          .autoSaleSection .row .rightPanel .row .leftCollumn .Buttons button:hover {
+            background-color: red; }
+
+.carClubSlider {
+  box-shadow: 500px 0px 0px 0px black;
+  background-image: url("../image/car_logo/parallax.jpg");
+  overflow: hidden;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .carClubSlider .row {
+    margin: 0px auto;
+    margin-top: 60px;
+    height: 150px; }
+    .carClubSlider .row .col-md-2 {
+      width: 100%;
+      height: 70px;
+      text-align: center; }
+      .carClubSlider .row .col-md-2 img {
+        text-align: center;
+        height: 100%;
+        overflow: hidden; }
+      .carClubSlider .row .col-md-2 h2 {
+        text-align: center; }
+    .carClubSlider .row .col-md-2:hover {
+      width: 100%;
+      height: 70px;
+      margin-top: -20px;
+      transition: 0.5s; }
+      .carClubSlider .row .col-md-2:hover img {
+        height: 120%;
+        transition: 0.7s;
+        overflow: hidden; }
+      .carClubSlider .row .col-md-2:hover h2 {
+        text-align: center;
+        font-size: 40px;
+        transition: 0.7s; }
+        .carClubSlider .row .col-md-2:hover h2 i {
+          color: blue;
+          text-decoration: none;
+          transition: 0.5s; }
+
+.gallerySection {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  padding-right: 0px;
+  padding-left: 0px; }
+  .gallerySection h1 {
+    padding-bottom: 10px; }
+  .gallerySection .gallery {
+    margin: 0px auto; }
+  .gallerySection .container .row .col-md-3 {
+    overflow: hidden;
+    padding-left: 0px;
+    padding-right: 0px; }
+  .gallerySection .container .row img {
+    width: 100%;
+    filter: gray;
+    /* IE6-9 */
+    -webkit-box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.75); }
+
+.footer .backDiv {
+  background-color: black;
+  color: white; }
+  .footer .backDiv .container {
+    padding: 0px; }
+    .footer .backDiv .container .row {
+      padding: 0px; }
+      .footer .backDiv .container .row .col-md-7 h5 {
+        padding-top: 10px; }
+      .footer .backDiv .container .row .navbar-link {
+        padding-top: 10px;
+        margin: 0px auto; }
+        .footer .backDiv .container .row .navbar-link ul {
+          padding-left: 0px; }
+          .footer .backDiv .container .row .navbar-link ul p {
+            margin: 0px; }
+            .footer .backDiv .container .row .navbar-link ul p a {
+              color: white; }
+            .footer .backDiv .container .row .navbar-link ul p a:hover {
+              text-decoration: none;
+              text-size: 25; }
+      .footer .backDiv .container .row .col-md-3 {
+        float: right; }
+
+/*# sourceMappingURL=style.css.map */

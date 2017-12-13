@@ -1,0 +1,136 @@
+﻿@model IEnumerable<car24project.Models.avtoAdvt>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.photo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mileage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.additionalInfo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.contactsName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.publicDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.viewSize)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.bodyType1.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.color.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.driveUnit.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.engineVolume.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fuelType.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.graduationYear.id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.marka.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.motorPower.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.transmission.name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.photo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mileage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.additionalInfo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.contactsName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.publicDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.viewSize)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.bodyType1.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.color.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.driveUnit.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.engineVolume.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fuelType.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.graduationYear.id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.marka.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.model.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.motorPower.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.transmission.name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,110 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+
+    <link rel="stylesheet" href="~/Content/css/loginpage.css">
+    <link rel="stylesheet" href="~/Content/js/loginpage.js">
+</head>
+</head>
+<body>
+    <div class="main fulllWidth">
+        <!-- top of the navigation bar -->
+        <div class="navBarSection fullwidth">
+            <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href='@Url.Action("Index", "Home")'>
+                    <img src="~/Content/image/logo.png">
+                </a>
+                <span>
+                    <input type="text" class="form-control" placeholder="Axtarış">
+                </span>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav mr-auto"></ul>
+                    <span class="navbar-text">
+                        <ul class="login-and-languages">
+                            <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                            <a href=""><i class="fa fa-github-square" aria-hidden="true"></i></a>
+                            <a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                            <a href=""><i class="fa fa-vk" aria-hidden="true"></i></a>
+                            <a href='@Url.Action("Index", "RegisterPage")'><i class="fa fa-user-circle-o" aria-hidden="true"></i> Qeydiyyat</a>
+                            <a href="#"><i class="fa fa-globe" aria-hidden="true"></i> Dil seçimi</a>
+                        </ul>
+                    </span>
+                </div>
+            </nav>
+        </div>
+
+        <!-- end top bar navigation -->
+        <div class=" row loginSection fullWidth">
+            <div class="col-md-12 width">
+                <form action="/action_page.php">
+                    <div class="imgcontainer">
+                        <img src="~/Content/image/logo.png" alt="Avatar" class="avatar">
+                    </div>
+                    <div class="container">
+                        <label><b></b></label>
+                        <input type="text" placeholder="İdtifadəçi ad" name="uname" required>
+
+                        <label><b></b></label>
+                        <input type="password" placeholder="Şifrə" name="psw" required>
+
+                        <button type="submit">Daxil ol</button>
+                        <input type="checkbox" checked="checked"> Məni yaddaşa saxla
+                    </div>
+
+                    <div class="container" style="background-color:#f1f1f1">
+                        <a href='@Url.Action("Index", "Home")'>
+                            <button type="button" class="cancelbtn">Əsas səhifə</button>
+                        </a>
+                        <span class="psw"><a href="#">Şifrəni </a>unutmusuz?</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- Footer section -->
+        <div class="footer fullwidth">
+            <!--Footer Links-->
+            <div class="backDiv fullwidth">
+                <div class="container width ">
+                    <div class="row col-md-12">
+                        <!--First column-->
+                        <div class="col-md-7 col-lg-3">
+                            <img src="~/Content/image/logo.png" style="width:100%;" />
+                        </div>
+                        <!--/.First column-->
+                        <!--Second column-->
+                        <div class="col-md-2 col-lg-2 navbar-link">
+
+                        </div>
+                        <!--/.Second column-->
+                        <!--Third column-->
+                        <div class="col-md-3 col-lg-3">
+                            <!--Info-->
+                            <p><i class="fa fa-home mr-3"></i> Azərbaycan Bakı</p>
+                            <p><i class="fa fa-envelope mr-3"></i>car360@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+</body>
+</html>

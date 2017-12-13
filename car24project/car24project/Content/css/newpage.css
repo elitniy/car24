@@ -1,0 +1,182 @@
+body {
+  background-color: #f6f6f6; }
+
+.fulllWidth {
+  width: 100%; }
+
+.width {
+  width: 90%; }
+
+.main {
+  margin: 0px auto; }
+  .main .register {
+    background-color: red; }
+
+.navBarSection .navbar {
+  background-color: black;
+  margin: 0px auto;
+  padding: 0px; }
+  .navBarSection .navbar button {
+    background-color: white;
+    border-radius: 25px; }
+  .navBarSection .navbar .navbar-brand img {
+    width: 50%; }
+  .navBarSection .navbar span input {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.9);
+    height: 20px;
+    width: 200px;
+    border-radius: 50rem; }
+    .navBarSection .navbar span input .btn {
+      padding: 0px; }
+  .navBarSection .navbar .collapse .navbar-text {
+    padding-bottom: 0px; }
+    .navBarSection .navbar .collapse .navbar-text .login-and-languages {
+      margin-bottom: 5px;
+      text-align: right;
+      color: white; }
+      .navBarSection .navbar .collapse .navbar-text .login-and-languages a {
+        margin-right: 15px; }
+      .navBarSection .navbar .collapse .navbar-text .login-and-languages a:hover {
+        margin-right: 15px;
+        color: green;
+        text-decoration: none; }
+    .navBarSection .navbar .collapse .navbar-text .loginPassword {
+      text-align: right;
+      margin-bottom: 5px; }
+      .navBarSection .navbar .collapse .navbar-text .loginPassword li {
+        display: inline-block;
+        margin-right: 15px; }
+        .navBarSection .navbar .collapse .navbar-text .loginPassword li input {
+          width: 150px;
+          font-size: 80%;
+          border: 0.5px; }
+        .navBarSection .navbar .collapse .navbar-text .loginPassword li button {
+          background-color: gray;
+          height: 20px;
+          color: black;
+          text-size: 5px;
+          line-height: 0.25;
+          border: 0.5px solid green; }
+        .navBarSection .navbar .collapse .navbar-text .loginPassword li button:hover {
+          background-color: red; }
+    .navBarSection .navbar .collapse .navbar-text .nav-tabs .nav-item .nav-link {
+      padding: 10px 8px;
+      color: white;
+      font-weight: 500;
+      font-size: 15px; }
+    .navBarSection .navbar .collapse .navbar-text .nav-tabs .nav-item .active {
+      background-color: red; }
+    .navBarSection .navbar .collapse .navbar-text .nav-tabs .nav-item:hover {
+      background-color: red;
+      transition: 0.7s; }
+
+.newsSection .sliderBox {
+  padding-top: 15px;
+  margin: 0px auto; }
+  .newsSection .sliderBox .col-md-8 {
+    display: inline-block;
+    padding: 0px; }
+    .newsSection .sliderBox .col-md-8 .container {
+      padding: 0px; }
+      .newsSection .sliderBox .col-md-8 .container .carousel .carousel-inner .carousel-item .text {
+        color: white;
+        background-color: rgba(0, 0, 0, 0.6); }
+      .newsSection .sliderBox .col-md-8 .container .carousel .carousel-inner .carousel-item img {
+        width: 100%;
+        height: 400px; }
+      .newsSection .sliderBox .col-md-8 .container p {
+        text-align: center; }
+    .newsSection .sliderBox .col-md-8 .car360panel {
+      margin-bottom: 20px;
+      background-color: #134564; }
+      .newsSection .sliderBox .col-md-8 .car360panel .row {
+        margin: 0px auto; }
+        .newsSection .sliderBox .col-md-8 .car360panel .row .col-md-12 {
+          display: flex; }
+          .newsSection .sliderBox .col-md-8 .car360panel .row .col-md-12 .logoImage img {
+            width: 150%; }
+        .newsSection .sliderBox .col-md-8 .car360panel .row .col-md-8 {
+          text-align: center; }
+          .newsSection .sliderBox .col-md-8 .car360panel .row .col-md-8 h2 {
+            margin-top: 25px;
+            color: white; }
+        .newsSection .sliderBox .col-md-8 .car360panel .row .button {
+          text-align: center; }
+          .newsSection .sliderBox .col-md-8 .car360panel .row .button button {
+            margin-top: 25px;
+            background-color: red;
+            border-radius: 8px;
+            border: 0px;
+            color: white;
+            width: 150px;
+            height: 40px; }
+  .newsSection .sliderBox .newsPanel {
+    float: right;
+    display: inline-block; }
+    .newsSection .sliderBox .newsPanel .newsBox {
+      box-shadow: 0 0px 5px 0px black;
+      overflow: hidden;
+      border: 1px solid black;
+      height: 70px;
+      margin: 10px 0px; }
+      .newsSection .sliderBox .newsPanel .newsBox .newsImage {
+        display: inline-block;
+        margin: 0px;
+        padding: 0px; }
+        .newsSection .sliderBox .newsPanel .newsBox .newsImage img {
+          width: 100%; }
+      .newsSection .sliderBox .newsPanel .newsBox .newsText {
+        float: right;
+        display: inline-block;
+        padding: 0 0 0 5px; }
+        .newsSection .sliderBox .newsPanel .newsBox .newsText h5 {
+          margin: 0px; }
+        .newsSection .sliderBox .newsPanel .newsBox .newsText p {
+          display: inline-block; }
+    .newsSection .sliderBox .newsPanel .newsBox:hover {
+      box-shadow: 0 0px 10px 0px black;
+      border: 2px solid black;
+      transition: 0.4s; }
+
+.footer {
+  background-image: url("../image/footer-parallax.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white; }
+  .footer .backDiv {
+    background-color: rgba(0, 0, 0, 0.5); }
+    .footer .backDiv .container .row {
+      margin-top: 0rem !important;
+      margin-bottom: 0rem !important; }
+      .footer .backDiv .container .row .col-md-4 h5 {
+        margin-top: 1.5rem !important; }
+      .footer .backDiv .container .row .navbar-link {
+        margin-left: 0px; }
+        .footer .backDiv .container .row .navbar-link ul {
+          padding-left: 0px; }
+          .footer .backDiv .container .row .navbar-link ul p {
+            margin: 0px; }
+            .footer .backDiv .container .row .navbar-link ul p a {
+              color: white; }
+            .footer .backDiv .container .row .navbar-link ul p a:hover {
+              text-decoration: none;
+              text-size: 25; }
+      .footer .backDiv .container .row .contactUs {
+        color: white; }
+        .footer .backDiv .container .row .contactUs input {
+          border-radius: 5px;
+          height: 25px;
+          color: white;
+          margin: 10px 0px;
+          width: 100%;
+          background-color: rgba(0, 0, 0, 0.5); }
+        .footer .backDiv .container .row .contactUs textarea {
+          border-radius: 5px;
+          height: 90px;
+          color: white;
+          margin: 10px 0px;
+          width: 100%;
+          background-color: rgba(0, 0, 0, 0.5); }

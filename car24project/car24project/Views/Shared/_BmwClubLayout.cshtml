@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@Page.Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+
+    <link rel="stylesheet" href="~/Content/css/bmwclub.css">
+    <link rel="stylesheet" href="~/Content/js/bmwclub.js">
+    <link rel="stylesheet" href="~/Content/css/bmwclubservice.css">
+    <link rel="stylesheet" href="~/Content/js/bmwclubservice.js">
+    <link rel="stylesheet" href="~/Content/css/bmwclubgallery.css">
+    <link rel="stylesheet" href="~/Content/js/bmwclubgallery.js">
+    <link rel="stylesheet" href="~/Content/css/bmwclubus.css">
+    <link rel="stylesheet" href="~/Content/js/bmwclubus.js">
+    @RenderSection("head", required: false)
+</head>
+<body>
+    <div class="main fulllWidth">
+        <!-- top of the navigation bar -->
+        <div class="navBarSection fullwidth">
+            <nav class="navbar navbar-toggleable-md navbar-light bg-faded ">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href='@Url.Action("Index", "Home")'>
+                    <img src="~/Content/image/logo.png" />
+                </a>
+                <span>
+                    <input type="text" class="form-control" placeholder="Axtarış">
+                </span>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav mr-auto"></ul>
+                    <span class="navbar-text">
+                        <ul class="login-and-languages">
+                            <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                            <a href=""><i class="fa fa-github-square" aria-hidden="true"></i></a>
+                            <a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                            <a href=""><i class="fa fa-vk" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-user-circle-o" aria-hidden="true"></i> Qeydiyyat</a>
+                            <a href="#"> Sifrəni unutmusuz?</a>
+                            <a href="#"><i class="fa fa-globe" aria-hidden="true"></i> Dil seçimi</a>
+                        </ul>
+
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link " href='@Url.Action("Index", "Home")'>ƏSAS SƏHİFƏ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href='@Url.Action("Index", "News")'>XƏBƏRLƏR</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href='@Url.Action("Index", "AutoClub")'>AVTO KLUBLAR</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href='@Url.Action("Index", "Gallery")'>GALEREYA</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href='@Url.Action("Index", "Catalog")'>KATALOQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href='@Url.Action("Index", "Contacts")'>KONTAKTLAR</a>
+                            </li>
+                        </ul>
+                    </span>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="clubNavBar ">
+        <ul class="nav nav-tabs width">
+            <li class="nav-item">
+                <a class="nav-link active" href='@Url.Action("Index", "BmwClub")'>Xəbərlər</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href='@Url.Action("Index", "BmwClubService")'>Xidmətlər</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href='@Url.Action("Index", "BmwClubGallery")'>Galereya</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href='@Url.Action("Index", "BmwClubUs")'>Klub haqqında</a>
+            </li>
+        </ul>
+    </div>
+
+    @RenderBody()
+
+    <div class="footer fullwidgth">
+        <!--Footer Links-->
+        <div class="backDiv fullwidth">
+            <div class="container width ">
+                <div class="row my-4">
+                    <!--First column-->
+                    <div class="col-md-4 col-lg-3">
+                        <h5 class="title mb-4 font-bold">Haqqimizda</h5>
+                        <p>Here you can use rows and columns here to organize your footer content.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum. </p>
+                    </div>
+                    <!--/.First column-->
+                    <!--Second column-->
+                    <div class="col-md-4 col-lg-2 navbar-link">
+                        <h5 class="title mb-4 font-bold">Linklər</h5>
+                        <ul>
+                            <p><a href="index.html#!">HOME</a></p>
+                            <p><a href="news.html#!">XƏBƏRLƏR</a></p>
+                            <p><a href="autoclub.html#!">AVTO KLUBLAR</a></p>
+                            <p><a href="gallery.html#!">GALEREYA</a></p>
+                            <p><a href="catalog.html#!">KATALOQ</a></p>
+                            <p><a href="contacts.html#!">KONTAKTLAR</a></p>
+                        </ul>
+                    </div>
+                    <!--/.Second column-->
+                    <!--Third column-->
+                    <div class="col-md-4 col-lg-3">
+                        <h5 class="title mb-4 font-bold">ünvan</h5>
+                        <!--Info-->
+                        <p><i class="fa fa-home mr-3"></i> Azərbaycan Bakı</p>
+                        <p><i class="fa fa-envelope mr-3"></i>car360@gmail.com</p>
+                        <p><i class="fa fa-phone mr-3"></i> + 994 50 204 20 39</p>
+                        <p><i class="fa fa-phone mr-3"></i> + 994 55 234 20 39</p>
+                    </div>
+                    <div class="col-md-4 col-lg-4 contactUs">
+                        <h5 class="title mb-4 font-bold">Bizimlə əlaqə</h5>
+                        <input type="" name="" placeholder="Adiniz">
+                        <input type="" name="" placeholder="Elektron ünvaniniz">
+                        <textarea placeholder="Mesajınız"></textarea>
+                        <button>Göndər</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+</body>
+</html>

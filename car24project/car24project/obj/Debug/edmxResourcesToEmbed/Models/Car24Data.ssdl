@@ -1,0 +1,874 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="projectDatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="autoShops">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="photos" Type="image" />
+    <Property Name="txet" Type="text" />
+    <Property Name="address" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="avtoAdvt">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="price" Type="int" Nullable="false" />
+    <Property Name="avtoAdvtGalleryİD" Type="int" Nullable="false" />
+    <Property Name="markaID" Type="int" Nullable="false" />
+    <Property Name="modelID" Type="int" Nullable="false" />
+    <Property Name="bodyType" Type="int" Nullable="false" />
+    <Property Name="colorID" Type="int" Nullable="false" />
+    <Property Name="engineVolumeID" Type="int" Nullable="false" />
+    <Property Name="motorPowerID" Type="int" Nullable="false" />
+    <Property Name="fuelTypeID" Type="int" Nullable="false" />
+    <Property Name="graduationYearID" Type="int" Nullable="false" />
+    <Property Name="mileage" Type="int" Nullable="false" />
+    <Property Name="driveUintID" Type="int" Nullable="false" />
+    <Property Name="transmissionID" Type="int" Nullable="false" />
+    <Property Name="additionalInfo" Type="text" />
+    <Property Name="phone" Type="int" Nullable="false" />
+    <Property Name="contactsName" Type="nvarchar" MaxLength="50" />
+    <Property Name="publicDate" Type="datetime" Nullable="false" />
+    <Property Name="viewSize" Type="int" />
+  </EntityType>
+  <EntityType Name="avtoAdvtGallery">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="photo" Type="image" Nullable="false" />
+  </EntityType>
+  <EntityType Name="bodyType">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="car_characteristic">
+    <Key>
+      <PropertyRef Name="id_car_characteristic" />
+    </Key>
+    <Property Name="id_car_characteristic" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="255" />
+    <Property Name="id_parent" Type="int" />
+  </EntityType>
+  <EntityType Name="car_characteristic_value">
+    <Key>
+      <PropertyRef Name="id_car_characteristic_value" />
+    </Key>
+    <Property Name="id_car_characteristic_value" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="value" Type="varchar" MaxLength="255" />
+    <Property Name="unit" Type="varchar" MaxLength="255" />
+    <Property Name="id_car_characteristic" Type="int" />
+    <Property Name="id_car_modification" Type="int" />
+  </EntityType>
+  <EntityType Name="car_generation">
+    <Key>
+      <PropertyRef Name="id_car_generation" />
+    </Key>
+    <Property Name="id_car_generation" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="id_car_model" Type="int" Nullable="false" />
+    <Property Name="year_begin" Type="varchar" MaxLength="255" />
+    <Property Name="year_end" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="car_model">
+    <Key>
+      <PropertyRef Name="id_car_model" />
+    </Key>
+    <Property Name="id_car_model" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_car_mark" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="car_modification">
+    <Key>
+      <PropertyRef Name="id_car_modification" />
+    </Key>
+    <Property Name="id_car_modification" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_car_serie" Type="int" Nullable="false" />
+    <Property Name="id_car_model" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="start_production_year" Type="int" />
+    <Property Name="end_production_year" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'projectDatabase.dbo.car_serie' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="car_serie">
+    <Key>
+      <PropertyRef Name="id_car_serie" />
+      <PropertyRef Name="id_car_model" />
+      <PropertyRef Name="name" />
+    </Key>
+    <Property Name="id_car_serie" Type="int" Nullable="false" />
+    <Property Name="id_car_model" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="id_car_generation" Type="int" />
+  </EntityType>
+  <EntityType Name="carWash">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="cat">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="clubs">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="color">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="countries">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="driveUnit">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="engineVolume">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="fuelType">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="gallery">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="photo" Type="image" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="clubID" Type="int" />
+  </EntityType>
+  <EntityType Name="gender">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="graduationYear">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="marka">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cat_id" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="marka_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="marka_cat">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="marka_id" Type="int" Nullable="false" />
+    <Property Name="cat_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="marka_norm">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="messages">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="messageTxet" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityType Name="model">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cat_id" Type="int" Nullable="false" />
+    <Property Name="marka_id" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="model_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="model_marka_cat">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cat_id" Type="int" Nullable="false" />
+    <Property Name="marka_id" Type="int" Nullable="false" />
+    <Property Name="model_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="motorPower">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="news">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="photo" Type="image" />
+    <Property Name="title" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="text" Type="text" Nullable="false" />
+    <Property Name="publicDate" Type="datetime" Nullable="false" />
+    <Property Name="author" Type="nvarchar" MaxLength="50" />
+    <Property Name="clubID" Type="int" />
+  </EntityType>
+  <EntityType Name="newsCategories">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="reklam">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="photo" Type="image" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="255" />
+    <Property Name="title" Type="nvarchar" MaxLength="50" />
+    <Property Name="text" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="services">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sities">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="transmission">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="users">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="surname" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="login" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="password" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="countryID" Type="int" Nullable="false" />
+    <Property Name="sityID" Type="int" Nullable="false" />
+    <Property Name="genderID" Type="int" Nullable="false" />
+    <Property Name="photo" Type="image" />
+    <Property Name="usersTypeID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="usersType">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_avtoAdvt_bodyType">
+    <End Role="bodyType" Type="Self.bodyType" Multiplicity="1" />
+    <End Role="avtoAdvt" Type="Self.avtoAdvt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="bodyType">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="avtoAdvt">
+        <PropertyRef Name="bodyType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_avtoAdvt_color">
+    <End Role="color" Type="Self.color" Multiplicity="1" />
+    <End Role="avtoAdvt" Type="Self.avtoAdvt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="color">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="avtoAdvt">
+        <PropertyRef Name="colorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_avtoAdvt_driveUnit">
+    <End Role="driveUnit" Type="Self.driveUnit" Multiplicity="1" />
+    <End Role="avtoAdvt" Type="Self.avtoAdvt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="driveUnit">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="avtoAdvt">
+        <PropertyRef Name="driveUintID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_avtoAdvt_engineVolume">
+    <End Role="engineVolume" Type="Self.engineVolume" Multiplicity="1" />
+    <End Role="avtoAdvt" Type="Self.avtoAdvt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="engineVolume">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="avtoAdvt">
+        <PropertyRef Name="engineVolumeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_avtoAdvt_fuelType">
+    <End Role="fuelType" Type="Self.fuelType" Multiplicity="1" />
+    <End Role="avtoAdvt" Type="Self.avtoAdvt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="fuelType">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="avtoAdvt">
+        <PropertyRef Name="fuelTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_avtoAdvt_graduationYear">
+    <End Role="graduationYear" Type="Self.graduationYear" Multiplicity="1" />
+    <End Role="avtoAdvt" Type="Self.avtoAdvt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="graduationYear">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="avtoAdvt">
+        <PropertyRef Name="graduationYearID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_avtoAdvt_marka">
+    <End Role="marka" Type="Self.marka" Multiplicity="1" />
+    <End Role="avtoAdvt" Type="Self.avtoAdvt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="marka">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="avtoAdvt">
+        <PropertyRef Name="markaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_avtoAdvt_model">
+    <End Role="model" Type="Self.model" Multiplicity="1" />
+    <End Role="avtoAdvt" Type="Self.avtoAdvt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="model">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="avtoAdvt">
+        <PropertyRef Name="modelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_avtoAdvt_motorPower">
+    <End Role="motorPower" Type="Self.motorPower" Multiplicity="1" />
+    <End Role="avtoAdvt" Type="Self.avtoAdvt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="motorPower">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="avtoAdvt">
+        <PropertyRef Name="motorPowerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_avtoAdvt_photo">
+    <End Role="avtoAdvtGallery" Type="Self.avtoAdvtGallery" Multiplicity="1" />
+    <End Role="avtoAdvt" Type="Self.avtoAdvt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="avtoAdvtGallery">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="avtoAdvt">
+        <PropertyRef Name="avtoAdvtGalleryİD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_avtoAdvt_transmission">
+    <End Role="transmission" Type="Self.transmission" Multiplicity="1" />
+    <End Role="avtoAdvt" Type="Self.avtoAdvt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="transmission">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="avtoAdvt">
+        <PropertyRef Name="transmissionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_car_characteristic_value_car_characteristic">
+    <End Role="car_characteristic" Type="Self.car_characteristic" Multiplicity="0..1" />
+    <End Role="car_characteristic_value" Type="Self.car_characteristic_value" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="car_characteristic">
+        <PropertyRef Name="id_car_characteristic" />
+      </Principal>
+      <Dependent Role="car_characteristic_value">
+        <PropertyRef Name="id_car_characteristic" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_car_characteristic_value_car_modification">
+    <End Role="car_modification" Type="Self.car_modification" Multiplicity="0..1" />
+    <End Role="car_characteristic_value" Type="Self.car_characteristic_value" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="car_modification">
+        <PropertyRef Name="id_car_modification" />
+      </Principal>
+      <Dependent Role="car_characteristic_value">
+        <PropertyRef Name="id_car_modification" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_car_generation_car_model">
+    <End Role="car_model" Type="Self.car_model" Multiplicity="1" />
+    <End Role="car_generation" Type="Self.car_generation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="car_model">
+        <PropertyRef Name="id_car_model" />
+      </Principal>
+      <Dependent Role="car_generation">
+        <PropertyRef Name="id_car_model" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_car_modification_car_model">
+    <End Role="car_model" Type="Self.car_model" Multiplicity="1" />
+    <End Role="car_modification" Type="Self.car_modification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="car_model">
+        <PropertyRef Name="id_car_model" />
+      </Principal>
+      <Dependent Role="car_modification">
+        <PropertyRef Name="id_car_model" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_car_serie_car_generation">
+    <End Role="car_generation" Type="Self.car_generation" Multiplicity="0..1" />
+    <End Role="car_serie" Type="Self.car_serie" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="car_generation">
+        <PropertyRef Name="id_car_generation" />
+      </Principal>
+      <Dependent Role="car_serie">
+        <PropertyRef Name="id_car_generation" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_car_serie_car_model">
+    <End Role="car_model" Type="Self.car_model" Multiplicity="1" />
+    <End Role="car_serie" Type="Self.car_serie" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="car_model">
+        <PropertyRef Name="id_car_model" />
+      </Principal>
+      <Dependent Role="car_serie">
+        <PropertyRef Name="id_car_model" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_marka_cat">
+    <End Role="cat" Type="Self.cat" Multiplicity="1" />
+    <End Role="marka" Type="Self.marka" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cat">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="marka">
+        <PropertyRef Name="cat_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_marka_cat_cat">
+    <End Role="cat" Type="Self.cat" Multiplicity="1" />
+    <End Role="marka_cat" Type="Self.marka_cat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cat">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="marka_cat">
+        <PropertyRef Name="cat_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_marka_cat_marka">
+    <End Role="marka" Type="Self.marka" Multiplicity="1" />
+    <End Role="marka_cat" Type="Self.marka_cat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="marka">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="marka_cat">
+        <PropertyRef Name="marka_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_marka_marka_norm">
+    <End Role="marka_norm" Type="Self.marka_norm" Multiplicity="1" />
+    <End Role="marka" Type="Self.marka" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="marka_norm">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="marka">
+        <PropertyRef Name="marka_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_model_cat">
+    <End Role="cat" Type="Self.cat" Multiplicity="1" />
+    <End Role="model" Type="Self.model" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cat">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="model">
+        <PropertyRef Name="cat_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_model_marka">
+    <End Role="marka" Type="Self.marka" Multiplicity="1" />
+    <End Role="model" Type="Self.model" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="marka">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="model">
+        <PropertyRef Name="marka_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_model_marka_cat_cat">
+    <End Role="cat" Type="Self.cat" Multiplicity="1" />
+    <End Role="model_marka_cat" Type="Self.model_marka_cat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cat">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="model_marka_cat">
+        <PropertyRef Name="cat_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_model_marka_cat_marka">
+    <End Role="marka" Type="Self.marka" Multiplicity="1" />
+    <End Role="model_marka_cat" Type="Self.model_marka_cat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="marka">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="model_marka_cat">
+        <PropertyRef Name="marka_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_model_marka_cat_model">
+    <End Role="model" Type="Self.model" Multiplicity="1" />
+    <End Role="model_marka_cat" Type="Self.model_marka_cat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="model">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="model_marka_cat">
+        <PropertyRef Name="model_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_news_clubs">
+    <End Role="clubs" Type="Self.clubs" Multiplicity="0..1" />
+    <End Role="news" Type="Self.news" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clubs">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="news">
+        <PropertyRef Name="clubID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_users_countries">
+    <End Role="countries" Type="Self.countries" Multiplicity="1" />
+    <End Role="users" Type="Self.users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="countries">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="users">
+        <PropertyRef Name="countryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_users_gender">
+    <End Role="gender" Type="Self.gender" Multiplicity="1" />
+    <End Role="users" Type="Self.users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="gender">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="users">
+        <PropertyRef Name="genderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_users_sities">
+    <End Role="sities" Type="Self.sities" Multiplicity="1" />
+    <End Role="users" Type="Self.users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sities">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="users">
+        <PropertyRef Name="sityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_users_usersType">
+    <End Role="usersType" Type="Self.usersType" Multiplicity="1" />
+    <End Role="users" Type="Self.users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="usersType">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="users">
+        <PropertyRef Name="usersTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="projectDatabaseModelStoreContainer">
+    <EntitySet Name="autoShops" EntityType="Self.autoShops" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="avtoAdvt" EntityType="Self.avtoAdvt" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="avtoAdvtGallery" EntityType="Self.avtoAdvtGallery" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="bodyType" EntityType="Self.bodyType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="car_characteristic" EntityType="Self.car_characteristic" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="car_characteristic_value" EntityType="Self.car_characteristic_value" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="car_generation" EntityType="Self.car_generation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="car_model" EntityType="Self.car_model" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="car_modification" EntityType="Self.car_modification" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="carWash" EntityType="Self.carWash" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cat" EntityType="Self.cat" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="clubs" EntityType="Self.clubs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="color" EntityType="Self.color" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="countries" EntityType="Self.countries" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="driveUnit" EntityType="Self.driveUnit" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="engineVolume" EntityType="Self.engineVolume" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="fuelType" EntityType="Self.fuelType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="gallery" EntityType="Self.gallery" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="gender" EntityType="Self.gender" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="graduationYear" EntityType="Self.graduationYear" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="marka" EntityType="Self.marka" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="marka_cat" EntityType="Self.marka_cat" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="marka_norm" EntityType="Self.marka_norm" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="messages" EntityType="Self.messages" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="model" EntityType="Self.model" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="model_marka_cat" EntityType="Self.model_marka_cat" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="motorPower" EntityType="Self.motorPower" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="news" EntityType="Self.news" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="newsCategories" EntityType="Self.newsCategories" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="reklam" EntityType="Self.reklam" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="services" EntityType="Self.services" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sities" EntityType="Self.sities" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="transmission" EntityType="Self.transmission" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="users" EntityType="Self.users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="usersType" EntityType="Self.usersType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="car_serie" EntityType="Self.car_serie" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [car_serie].[id_car_serie] AS [id_car_serie], 
+    [car_serie].[id_car_model] AS [id_car_model], 
+    [car_serie].[name] AS [name], 
+    [car_serie].[id_car_generation] AS [id_car_generation]
+    FROM [dbo].[car_serie] AS [car_serie]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_avtoAdvt_bodyType" Association="Self.FK_avtoAdvt_bodyType">
+      <End Role="bodyType" EntitySet="bodyType" />
+      <End Role="avtoAdvt" EntitySet="avtoAdvt" />
+    </AssociationSet>
+    <AssociationSet Name="FK_avtoAdvt_color" Association="Self.FK_avtoAdvt_color">
+      <End Role="color" EntitySet="color" />
+      <End Role="avtoAdvt" EntitySet="avtoAdvt" />
+    </AssociationSet>
+    <AssociationSet Name="FK_avtoAdvt_driveUnit" Association="Self.FK_avtoAdvt_driveUnit">
+      <End Role="driveUnit" EntitySet="driveUnit" />
+      <End Role="avtoAdvt" EntitySet="avtoAdvt" />
+    </AssociationSet>
+    <AssociationSet Name="FK_avtoAdvt_engineVolume" Association="Self.FK_avtoAdvt_engineVolume">
+      <End Role="engineVolume" EntitySet="engineVolume" />
+      <End Role="avtoAdvt" EntitySet="avtoAdvt" />
+    </AssociationSet>
+    <AssociationSet Name="FK_avtoAdvt_fuelType" Association="Self.FK_avtoAdvt_fuelType">
+      <End Role="fuelType" EntitySet="fuelType" />
+      <End Role="avtoAdvt" EntitySet="avtoAdvt" />
+    </AssociationSet>
+    <AssociationSet Name="FK_avtoAdvt_graduationYear" Association="Self.FK_avtoAdvt_graduationYear">
+      <End Role="graduationYear" EntitySet="graduationYear" />
+      <End Role="avtoAdvt" EntitySet="avtoAdvt" />
+    </AssociationSet>
+    <AssociationSet Name="FK_avtoAdvt_marka" Association="Self.FK_avtoAdvt_marka">
+      <End Role="marka" EntitySet="marka" />
+      <End Role="avtoAdvt" EntitySet="avtoAdvt" />
+    </AssociationSet>
+    <AssociationSet Name="FK_avtoAdvt_model" Association="Self.FK_avtoAdvt_model">
+      <End Role="model" EntitySet="model" />
+      <End Role="avtoAdvt" EntitySet="avtoAdvt" />
+    </AssociationSet>
+    <AssociationSet Name="FK_avtoAdvt_motorPower" Association="Self.FK_avtoAdvt_motorPower">
+      <End Role="motorPower" EntitySet="motorPower" />
+      <End Role="avtoAdvt" EntitySet="avtoAdvt" />
+    </AssociationSet>
+    <AssociationSet Name="FK_avtoAdvt_photo" Association="Self.FK_avtoAdvt_photo">
+      <End Role="avtoAdvtGallery" EntitySet="avtoAdvtGallery" />
+      <End Role="avtoAdvt" EntitySet="avtoAdvt" />
+    </AssociationSet>
+    <AssociationSet Name="FK_avtoAdvt_transmission" Association="Self.FK_avtoAdvt_transmission">
+      <End Role="transmission" EntitySet="transmission" />
+      <End Role="avtoAdvt" EntitySet="avtoAdvt" />
+    </AssociationSet>
+    <AssociationSet Name="FK_car_characteristic_value_car_characteristic" Association="Self.FK_car_characteristic_value_car_characteristic">
+      <End Role="car_characteristic" EntitySet="car_characteristic" />
+      <End Role="car_characteristic_value" EntitySet="car_characteristic_value" />
+    </AssociationSet>
+    <AssociationSet Name="FK_car_characteristic_value_car_modification" Association="Self.FK_car_characteristic_value_car_modification">
+      <End Role="car_modification" EntitySet="car_modification" />
+      <End Role="car_characteristic_value" EntitySet="car_characteristic_value" />
+    </AssociationSet>
+    <AssociationSet Name="FK_car_generation_car_model" Association="Self.FK_car_generation_car_model">
+      <End Role="car_model" EntitySet="car_model" />
+      <End Role="car_generation" EntitySet="car_generation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_car_modification_car_model" Association="Self.FK_car_modification_car_model">
+      <End Role="car_model" EntitySet="car_model" />
+      <End Role="car_modification" EntitySet="car_modification" />
+    </AssociationSet>
+    <AssociationSet Name="FK_car_serie_car_generation" Association="Self.FK_car_serie_car_generation">
+      <End Role="car_generation" EntitySet="car_generation" />
+      <End Role="car_serie" EntitySet="car_serie" />
+    </AssociationSet>
+    <AssociationSet Name="FK_car_serie_car_model" Association="Self.FK_car_serie_car_model">
+      <End Role="car_model" EntitySet="car_model" />
+      <End Role="car_serie" EntitySet="car_serie" />
+    </AssociationSet>
+    <AssociationSet Name="FK_marka_cat" Association="Self.FK_marka_cat">
+      <End Role="cat" EntitySet="cat" />
+      <End Role="marka" EntitySet="marka" />
+    </AssociationSet>
+    <AssociationSet Name="FK_marka_cat_cat" Association="Self.FK_marka_cat_cat">
+      <End Role="cat" EntitySet="cat" />
+      <End Role="marka_cat" EntitySet="marka_cat" />
+    </AssociationSet>
+    <AssociationSet Name="FK_marka_cat_marka" Association="Self.FK_marka_cat_marka">
+      <End Role="marka" EntitySet="marka" />
+      <End Role="marka_cat" EntitySet="marka_cat" />
+    </AssociationSet>
+    <AssociationSet Name="FK_marka_marka_norm" Association="Self.FK_marka_marka_norm">
+      <End Role="marka_norm" EntitySet="marka_norm" />
+      <End Role="marka" EntitySet="marka" />
+    </AssociationSet>
+    <AssociationSet Name="FK_model_cat" Association="Self.FK_model_cat">
+      <End Role="cat" EntitySet="cat" />
+      <End Role="model" EntitySet="model" />
+    </AssociationSet>
+    <AssociationSet Name="FK_model_marka" Association="Self.FK_model_marka">
+      <End Role="marka" EntitySet="marka" />
+      <End Role="model" EntitySet="model" />
+    </AssociationSet>
+    <AssociationSet Name="FK_model_marka_cat_cat" Association="Self.FK_model_marka_cat_cat">
+      <End Role="cat" EntitySet="cat" />
+      <End Role="model_marka_cat" EntitySet="model_marka_cat" />
+    </AssociationSet>
+    <AssociationSet Name="FK_model_marka_cat_marka" Association="Self.FK_model_marka_cat_marka">
+      <End Role="marka" EntitySet="marka" />
+      <End Role="model_marka_cat" EntitySet="model_marka_cat" />
+    </AssociationSet>
+    <AssociationSet Name="FK_model_marka_cat_model" Association="Self.FK_model_marka_cat_model">
+      <End Role="model" EntitySet="model" />
+      <End Role="model_marka_cat" EntitySet="model_marka_cat" />
+    </AssociationSet>
+    <AssociationSet Name="FK_news_clubs" Association="Self.FK_news_clubs">
+      <End Role="clubs" EntitySet="clubs" />
+      <End Role="news" EntitySet="news" />
+    </AssociationSet>
+    <AssociationSet Name="FK_users_countries" Association="Self.FK_users_countries">
+      <End Role="countries" EntitySet="countries" />
+      <End Role="users" EntitySet="users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_users_gender" Association="Self.FK_users_gender">
+      <End Role="gender" EntitySet="gender" />
+      <End Role="users" EntitySet="users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_users_sities" Association="Self.FK_users_sities">
+      <End Role="sities" EntitySet="sities" />
+      <End Role="users" EntitySet="users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_users_usersType" Association="Self.FK_users_usersType">
+      <End Role="usersType" EntitySet="usersType" />
+      <End Role="users" EntitySet="users" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

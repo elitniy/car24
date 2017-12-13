@@ -1,0 +1,239 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bootstrap Dashboard by Bootstrapious.com</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="~/Areas/Cingo/Content/vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="~/Areas/Cingo/Content/vendor/font-awesome/css/font-awesome.min.css">
+    <!-- Custom icon font-->
+    <link rel="stylesheet" href="~/Areas/Cingo/Content/css/fontastic.css">
+    <!-- Google fonts - Roboto -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <!-- jQuery Circle-->
+    <link rel="stylesheet" href="~/Areas/Cingo/Content/css/grasp_mobile_progress_circle-1.0.0.min.css">
+    <!-- Custom Scrollbar-->
+    <link rel="stylesheet" href="~/Areas/Cingo/Content/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="~/Areas/Cingo/Content/css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="~/Areas/Cingo/Content/css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="~/Areas/Cingo/Content/favicon.png">
+
+    @RenderSection("head", required: false)
+</head>
+<body>
+    <nav class="side-navbar">
+        <div class="side-navbar-wrapper">
+            <div class="sidenav-header d-flex align-items-center justify-content-center">
+                <div class="sidenav-header-inner text-center">
+                    <img src="~/Areas/Cingo/Content/img/avatar-1.jpg" alt="person" class="img-fluid rounded-circle">
+                    <h2 class="h5 text-uppercase">Elitnıy</h2><span class="text-uppercase">Lezgi</span>
+                </div>
+                <div class="sidenav-header-logo"><a href="index.html" class="brand-small text-center"> <strong>B</strong><strong class="text-primary">D</strong></a></div>
+            </div>
+            <div class="main-menu">
+                <ul id="side-main-menu" class="side-menu list-unstyled">
+                    <li> <a href='@Url.Action("Index", "AdminHome")'> <i class="icon-home"></i><span>Əsas səhifə</span></a></li>
+                    <li> <a href='@Url.Action("Index", "Newss")'> <i class="icon-home"></i><span>Xəbərlər</span></a></li>
+                    <li> <a href='@Url.Action("Index", "AvtoAdvts")'> <i class="icon-presentation"></i><span>Elanlar</span></a></li>
+                    <li> <a href='@Url.Action("Index", "Galleries")'> <i class="icon-grid"> </i><span>Galereya </span></a></li>
+                    <li> <a href='@Url.Action("Index", "AdminHome")'> <i class="icon-interface-windows"></i><span>Giriş Səhifə</span></a></li>
+                    <li> <a href='@Url.Action("Index", "Markas")'> <i class="icon-interface-windows"></i><span>Marka</span></a></li>
+                    <li> <a href='@Url.Action("Index", "Modelss")'> <i class="icon-interface-windows"></i><span>Model</span></a></li>
+                    <li> <a href='@Url.Action("Index", "Colors")'> <i class="icon-interface-windows"></i><span>Rənglər(avto)</span></a></li>
+                    <li> <a href='@Url.Action("Index", "Clubss")'> <i class="icon-interface-windows"></i><span>Avtoklublar</span></a></li>
+                </ul>
+            </div>
+            <div class="admin-menu">
+                <ul id="side-admin-menu" class="side-menu list-unstyled">
+                    <li>
+                        <a href="#pages-nav-list" data-toggle="collapse" aria-expanded="false">
+                            <i class="icon-interface-windows"></i><span>Avto klublar</span>
+                            <div class="arrow pull-right"><i class="fa fa-angle-down"></i></div>
+                        </a>
+                        <ul id="pages-nav-list" class="collapse list-unstyled">
+                            <li>
+                                <a href='@Url.Action("Index", "AutoShops")'>
+                                    <i class="icon-flask"> </i><span>Mağazalar</span>
+                                    <div class="badge badge-info">Special</div>
+                                </a>
+                            </li>
+                            <li>
+                            <li>
+                                <a href='@Url.Action("Index", "Services")'>
+                                    <i class="icon-flask"> </i><span>Təmir</span>
+                                    <div class="badge badge-info">Special</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='@Url.Action("Index", "CarWashes")'>
+                                    <i class="icon-flask"> </i><span>Avto təmizlik</span>
+                                    <div class="badge badge-info">Special</div>
+                                </a>
+                            </li>
+                            <li> <a href='@Url.Action("Index", "AdminHome")'>BMW klub</a></li>
+                            <li> <a href='@Url.Action("Index", "AdminHome")'>Opel klub</a></li>
+                        </ul>
+                    </li>
+                    
+                        <a href='@Url.Action("Index", "AdminHome")'>
+                            <i class="icon-flask"> </i><span>Reklamar</span>
+                            <div class="badge badge-info">Special</div>
+                        </a>
+                    </li>
+                   
+                    <li>
+                        <a href='@Url.Action("Index", "Messages")'>
+                            <i class="icon-flask"> </i><span>Mesajlar</span>
+                            <div class="badge badge-info">Special</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href='@Url.Action("Index", "Users")'>
+                            <i class="icon-flask"> </i><span>İstifadəçilər</span>
+                            <div class="badge badge-info">Special</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href='@Url.Action("Index", "UsersTypes")'>
+                            <i class="icon-flask"> </i><span>İstifadəçi dərəcələri</span>
+                            <div class="badge badge-info">Special</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="page home-page">
+        <!-- navbar-->
+        <header class="header">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <div class="navbar-holder d-flex align-items-center justify-content-between">
+                        <div class="navbar-header">
+                            <a id="toggle-btn" href="#" class="menu-btn"><i class="icon-bars"> </i></a><a href="index.html" class="navbar-brand">
+                                <div class="brand-text d-none d-md-inline-block"><span>CAR </span><strong class="text-primary">24</strong></div>
+                            </a>
+                        </div>
+                        <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
+                            <li class="nav-item dropdown">
+                                <a id="notifications" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-bell"></i><span class="badge badge-warning">12</span></a>
+                                <ul aria-labelledby="notifications" class="dropdown-menu">
+                                    <li>
+                                        <a rel="nofollow" href='@Url.Action("Index", "AdminHome")' class="dropdown-item">
+                                            <div class="notification d-flex justify-content-between">
+                                                <div class="notification-content"><i class="fa fa-envelope"></i>You have 6 new messages </div>
+                                                <div class="notification-time"><small>4 minutes ago</small></div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a rel="nofollow" href='@Url.Action("Index", "AdminHome")' class="dropdown-item">
+                                            <div class="notification d-flex justify-content-between">
+                                                <div class="notification-content"><i class="fa fa-twitter"></i>You have 2 followers</div>
+                                                <div class="notification-time"><small>4 minutes ago</small></div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a rel="nofollow" href='@Url.Action("Index", "AdminHome")' class="dropdown-item">
+                                            <div class="notification d-flex justify-content-between">
+                                                <div class="notification-content"><i class="fa fa-upload"></i>Server Rebooted</div>
+                                                <div class="notification-time"><small>4 minutes ago</small></div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a rel="nofollow" href='@Url.Action("Index", "AdminHome")' class="dropdown-item">
+                                            <div class="notification d-flex justify-content-between">
+                                                <div class="notification-content"><i class="fa fa-twitter"></i>You have 2 followers</div>
+                                                <div class="notification-time"><small>10 minutes ago</small></div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> <strong> <i class="fa fa-bell"></i>Butun bildirişlər </strong></a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a id="messages" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-envelope"></i><span class="badge badge-info">10</span></a>
+                                <ul aria-labelledby="notifications" class="dropdown-menu">
+                                    <li>
+                                        <a rel="nofollow" href="#" class="dropdown-item d-flex">
+                                            <div class="msg-profile"> <img src="~/Areas/Cingo/Content/img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
+                                            <div class="msg-body">
+                                                <h3 class="h5">Jason Doe</h3><span>sent you a direct message</span><small>3 days ago at 7:58 pm - 10.06.2014</small>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a rel="nofollow" href="#" class="dropdown-item d-flex">
+                                            <div class="msg-profile"> <img src="~/Areas/Cingo/Content/img/avatar-2.jpg" alt="..." class="img-fluid rounded-circle"></div>
+                                            <div class="msg-body">
+                                                <h3 class="h5">Frank Williams</h3><span>sent you a direct message</span><small>3 days ago at 7:58 pm - 10.06.2014</small>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a rel="nofollow" href="#" class="dropdown-item d-flex">
+                                            <div class="msg-profile"> <img src="~/Areas/Cingo/Content/img/avatar-3.jpg" alt="..." class="img-fluid rounded-circle"></div>
+                                            <div class="msg-body">
+                                                <h3 class="h5">Ashley Wood</h3><span>sent you a direct message</span><small>3 days ago at 7:58 pm - 10.06.2014</small>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> <strong> <i class="fa fa-envelope"></i>Bütun mesajlar </strong></a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a href="login.html" class="nav-link logout">Çıxış<i class="fa fa-sign-out"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        @RenderBody()
+        <footer class="main-footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p>Your company &copy; 2017-2019</p>
+                    </div>
+                    <div class="col-sm-6 text-right">
+                        <p>Design by <a href="https://bootstrapious.com" class="external">Bootstrapious</a></p>
+                        <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- Javascript files-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"> </script>
+    <script src="~/Areas/Cingo/Content/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/Areas/Cingo/Content/vendor/jquery.cookie/jquery.cookie.js"> </script>
+    <script src="~/Areas/Cingo/Content/vendor/js/grasp_mobile_progress_circle-1.0.0.min.js"></script>
+    <script src="~/Areas/Cingo/Content/vendor/jquery-validation/jquery.validate.min.js"></script>
+    <script src="~/Areas/Cingo/Content/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="~/Areas/Cingo/Content/vendor/js/charts-home.js"></script>
+    <script src="~/Areas/Cingo/Content/vendor/js/front.js"></script>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.-->
+    <!---->
+    <script>
+        (function (b, o, i, l, e, r) {
+        b.GoogleAnalyticsObject = l; b[l] || (b[l] =
+            function () { (b[l].q = b[l].q || []).push(arguments) }); b[l].l = +new Date;
+            e = o.createElement(i); r = o.getElementsByTagName(i)[0];
+            e.src = '//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e, r)
+        }(window, document, 'script', 'ga'));
+        ga('create', 'UA-XXXXX-X'); ga('send', 'pageview');
+    </script>
+</body>
+</html>
